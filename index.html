@@ -49,11 +49,11 @@
             <div class="mobile-header">
                 <button class="hamburger-menu" id="hamburger-menu">
                     <i class="fas fa-bars"></i>
-                </button> 
+                </button>
                 <a href="index.html" class="header-logo">ATHNA</a>
-                <div class="mobile-header-icons">
-                    <i class="fas fa-bars header-icon hidden"></i>
-                </div>
+                <button class="hamburger-menu hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -78,18 +78,17 @@
         <div class="container squish-container">
             <span class="hero-title"> ANTHA</span>
             <a href="index.html#shop">
-            <button class="btn hero-btn-pos hero-btn" >Explore Now</button>
+                <button class="btn hero-btn-pos hero-btn">Explore Now</button>
             </a>
         </div>
         <script>
             const images = [
-                'img/cson/1.jpg',
-                'img/cson/2.jpg',
-                'img/cson/3.jpg',
-                'img/cson/5.jpg',
-                'img/cson/6.jpg',
-                'img/cson/7.jpg',
-                'img/cson/8.jpg',
+                '/img/ASSEET/LandingPage/1.webp',
+                '/img/ASSEET/LandingPage/2.webp',
+                '/img/ASSEET/LandingPage/3.webp',
+                '/img/ASSEET/LandingPage/4.webp',
+                '/img/ASSEET/LandingPage/5.webp',
+                '/img/ASSEET/LandingPage/6.webp',
             ];
             let currentIndex = 0;
             const hero = document.getElementById("slideshow");
@@ -122,22 +121,23 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="about-us" id="about-us-section">
-        <div class="container squish-container" id="about-us">
+    <section class="container about-us" id="about-us-section">
+        <div class="about-picture">
+            <img src="/img/cson/Rectangle 6.jpg">
+        </div>
+        <div class="about-content" id="about-us">
             <div class="section-title line" id="about-us-title">
-                <h2>About Us</h2>
+                <h2>Who We Are</h2>
             </div>
-            <div class="about-content">
-                We import our products directly from China, curating outfits and accessories with a refined, premium
-                look. Each piece is carefully selected to ensure quality, comfort, and modern design that complements
-                your everyday lifestyle. Our collections are made for those who value effortless style versatile,
-                timeless, and easy to wear for any occasion. We focus on delivering fashion that looks premium, feels
-                right, and fits seamlessly into your lifestyle.
+            <div class="about-content-text">
+                <p>At ATHNA, we curate premium-inspired sport and casual wear designed for modern movement and refined
+                    everyday style. Each collection is thoughtfully selected to elevate your wardrobe while delivering
+                    personalized care. ATHNA is where comfort meets confidence, and individuality moves with purpose
+                    through timeless design and effortless expression.</p>
             </div>
         </div>
-
-        <span class="bg-text ">SPARKLE</span>
-        <img src="blackSpiral.png" alt="SPARKLE" class="bg-logo mhidd">
+        <img src="/img/bgsvg/About us.svg" class="bg-img1">
+        <div class="about-tag">Elevate your everyday wear</div>
     </section>
 
 
@@ -145,8 +145,8 @@
     <section class="highlight line" id="highlight">
         <div class="container">
 
-            <div class="section-title invert">
-                <h2>Highlight</h2>
+            <div class="section-title High-tit invert">
+                <h2>Limited Drop</h2>
             </div>
 
             <!-- Swiper Slider -->
@@ -156,14 +156,10 @@
                     <div class="swiper-slide" onclick="showProductPopup(1)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Man Bags/2500000/Bags Men 1.webp"
-                                     class="card-img">
+                                <img src="/img/ASSEET/Highlight/7.webp" class="card-img">
                             </div>
+                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Clutch Bag</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 2.500.000</div>
-                            </div>
                             <!-- <div class="card-tag">New</div> -->
                         </div>
                     </div>
@@ -172,16 +168,10 @@
                     <div class="swiper-slide" onclick="showProductPopup(49)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Man Casual/1100000/Casual Men 26.webp"
-                                    class="card-img">
+                                <img src="/img/ASSEET/Highlight/8.webp" class="card-img">
                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Polo Shirt</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 1.100.000</div>
-
                             </div>
-                            
                         </div>
                     </div>
 
@@ -189,48 +179,33 @@
                     <div class="swiper-slide" onclick="showProductPopup(160)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Man Casual/800000/Casual Men 16.webp"
-                                    class="card-img">
+                                <img src="/img/ASSEET/Highlight/9.webp" class="card-img">
                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Casual Shorts</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 800.000</div>
-
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <div class="swiper-slide" onclick="showProductPopup(321)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Woman Casual/1699000/Casua Women 2.webp"
-                                    class="card-img">
+                                <img src="/img/ASSEET/Highlight/7.webp" class="card-img">
                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Casual Top</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 1.699.000</div>
-
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <div class="swiper-slide" onclick="showProductPopup(280)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Woman Bags/3500000/Bags Women 42.webp"
-                                    class="card-img">
+                                <img src="/img/ASSEET/Highlight/8.webp" class="card-img">
                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Bag</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 3.500.000</div>
-
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -238,16 +213,11 @@
                     <div class="swiper-slide" onclick="showProductPopup(447)">
                         <div class="trending-card">
                             <div class="card-img-container">
-                                <img src="/img/Man Accessories/Accs Men7.webp"
-                                    class="card-img">
+                                <img src="/img/ASSEET/Highlight/9.webp" class="card-img">
                             </div>
                             <div class="card-content">
-                                <h3 class="card-title">Sunglasses</h3>
-                                <p class="card-description"></p>
-                                <div class="card-price">Rp 3.500.000</div>
-
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -270,154 +240,445 @@
         </div>
     </section>
 
-    <!-- coming soon -->
-    <!--
-    <section class="csoon">
-        <div class="container squish-container">
-            <h1>Coming Soon</h1>
-        </div>
-    </section>
-    -->
 
     <!-- Shop Category Section with Bento Box Display -->
-  <section class="shop-category-index" id="shop">
-        <div class="container">
-            <div class="section-title">
-                <h2>Shop by Category</h2>
-            </div>
-            <div class="section-title">
-                <h3>Category for Man</h3>
-            </div>
-            <div class="bento-grid">
-                <div class="category-item">
-                    <a href="products.html?category=Man Casual">
-                        <img src="/img/cat/mcasual.webp"
-                            alt="CASUAL" class="category-img">
-                        <div class="category-text">
-                            <h3>CASUAL</h3>
-                            <!--add <P> to detail-->
-                        </div>
-                    </a>
+    <section class="shop-category-index" id="shop">
+        <div class="">
+            <div class="category-header">
+                <div class="section-title category-title">
+                    <h2>Shop by Category</h2>
+                    <img src="/img/bgsvg/Background category.svg" class="bg-img2">
                 </div>
-                <div class="category-item">
-                    <a href="products.html?category=Man Swimming Wear">
-                        <img src="/img/cat/mswiming.webp"
-                            alt="SWIMING WEAR" class="category-img">
-                        <div class="category-text">
-                            <h3>SWIMING WEAR</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Man Sportwear">
-                        <img src="/img/cat/msport.webp"
-                            alt="sportwear" class="category-img">
-                        <div class="category-text">
-                            <h3>sportwear</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Man Bags">
-                        <img src="/img/cat/mbags.webp"
-                            alt="Bags" class="category-img">
-                        <div class="category-text">
-                            <h3>Bags</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Man Accessories">
-                        <img src="/img/cat/macc.webp"
-                            alt="accessories" class="category-img">
-                        <div class="category-text">
-                            <h3>accessories</h3>
-                        </div>
-                    </a>
+                <div class="category-dropdown">
+                    <button class="dropdown-btn">
+                        All Categories
+                        <span class="dropdown-arrow">▼</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="products.html?category=Women casualwear" class="dropdown-item">Casualwear Women</a>
+                        <a href="products.html?category=Women Sportwear" class="dropdown-item">Sportwear Women</a>
+                        <a href="products.html?category=Men Sportswear" class="dropdown-item">Sportwear Man</a>
+                        <a href="products.html?category=Caps &amp; Hats" class="dropdown-item">Caps & Hats</a>
+                        <a href="products.html?category=Accessories" class="dropdown-item">Accessories</a>
+                    </div>
                 </div>
             </div>
-
-            <div class="section-title">
-                <h3>Category for Woman</h3>
-            </div>
-
-            <div class="bento-grid">
-                <div class="category-item">
-                    <a href="products.html?category=Woman Casual">
-                        <img src="/img/cat/wcasual.webp"
-                            alt="Casual" class="category-img">
-                        <div class="category-text">
-                            <h3>Casual</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Woman Swimming Wear">
-                        <img src="/img/cat/wswiming.webp"
-                            alt="Swimming wear" class="category-img">
-                        <div class="category-text">
-                            <h3>Swimming wear</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Woman Sportwear">
-                        <img src="/img/cat/wsport.webp"
-                            alt="Sportwear" class="category-img">
-                        <div class="category-text">
-                            <h3>Sportwear</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Woman Bags">
-                        <img src="/img/cat/wbags.webp"
-                            alt="Bags" class="category-img">
-                        <div class="category-text">
-                            <h3>Bags</h3>
-                        </div>
-                    </a>
-                </div>
-                <div class="category-item">
-                    <a href="products.html?category=Woman Accessories">
-                        <img src="/img/cat/wacc.webp"
-                            alt="accessories" class="category-img">
-                        <div class="category-text">
-                            <h3>accessories</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <span class="bg-text2 ">SPARKLE</span>
     </section>
+
+    <!-- product landing Section -->
+     <!-- Category 1: casualwearWoman -->
+    <section class="prod-land">
+        <div class="prod-land-tit">
+            <h2>Casualwear Women</h2>
+        </div>
+
+        <div class="cards-slider-container" id="casualwear-slider">
+            <div class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop&crop=face"
+                            alt="Casual T-Shirt">
+                    </div>
+                    <div class="card-content">
+                        <h3>Relaxed Fit T-Shirt</h3>
+                        <p class="price">$29.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop"
+                            alt="Denim Jacket">
+                    </div>
+                    <div class="card-content">
+                        <h3>Classic Denim Jacket</h3>
+                        <p class="price">$59.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=400&h=500&fit=crop"
+                            alt="Linen Trousers">
+                    </div>
+                    <div class="card-content">
+                        <h3>Linen Blend Trousers</h3>
+                        <p class="price">$44.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop"
+                            alt="Summer Dress">
+                    </div>
+                    <div class="card-content">
+                        <h3>Summer Midi Dress</h3>
+                        <p class="price">$49.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=400&h=500&fit=crop"
+                            alt="Knit Sweater">
+                    </div>
+                    <div class="card-content">
+                        <h3>Oversized Knit Sweater</h3>
+                        <p class="price">$54.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400&h=500&fit=crop"
+                            alt="Denim Skirt">
+                    </div>
+                    <div class="card-content">
+                        <h3>A-Line Denim Skirt</h3>
+                        <p class="price">$39.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop"
+                            alt="Casual Blouse">
+                    </div>
+                    <div class="card-content">
+                        <h3>Silk Blend Blouse</h3>
+                        <p class="price">$42.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev-arrow">‹</button>
+            <button class="slider-arrow next-arrow">›</button>
+        </div>
+
+        <div class="slider-dots"></div>
+
+        <a class="otw-cat" href="products.html?category=Women%20casualwear">See More Collection</a>
+    </section>
+
+    <!-- Category 2: SportwearWoman -->
+    <section class="prod-land">
+        <div class="prod-land-tit">
+            <h2>Sportwear Women</h2>
+        </div>
+
+        <div class="cards-slider-container" id="Sportwear-slider">
+            <div class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop"
+                            alt="Business Suit">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tailored Blazer</h3>
+                        <p class="price">$89.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=500&fit=crop"
+                            alt="Evening Gown">
+                    </div>
+                    <div class="card-content">
+                        <h3>Evening Gown</h3>
+                        <p class="price">$129.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=400&h=500&fit=crop"
+                            alt="Office Dress">
+                    </div>
+                    <div class="card-content">
+                        <h3>Office Sheath Dress</h3>
+                        <p class="price">$79.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop"
+                            alt="Sportwear Pants">
+                    </div>
+                    <div class="card-content">
+                        <h3>Wide Leg Trousers</h3>
+                        <p class="price">$64.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?w=400&h=500&fit=crop"
+                            alt="Cocktail Dress">
+                    </div>
+                    <div class="card-content">
+                        <h3>Cocktail Dress</h3>
+                        <p class="price">$99.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev-arrow">‹</button>
+            <button class="slider-arrow next-arrow">›</button>
+        </div>
+
+        <div class="slider-dots"></div>
+
+        <a class="otw-cat" href="products.html?category=Women Sportwear">See More Collection</a>
+    </section>
+
+    <!-- Category 3: SportswearMan -->
+    <section class="prod-land">
+        <div class="prod-land-tit">
+            <h2>Sportswear Men</h2>
+        </div>
+
+        <div class="cards-slider-container" id="sportswearMan-slider">
+            <div class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594736797933-d0301c3c14f9?w=400&h=500&fit=crop"
+                            alt="Yoga Set">
+                    </div>
+                    <div class="card-content">
+                        <h3>Yoga Set</h3>
+                        <p class="price">$49.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=500&fit=crop"
+                            alt="Running Shoes">
+                    </div>
+                    <div class="card-content">
+                        <h3>Running Shoes</h3>
+                        <p class="price">$89.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop"
+                            alt="Training Jacket">
+                    </div>
+                    <div class="card-content">
+                        <h3>Training Jacket</h3>
+                        <p class="price">$59.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop"
+                            alt="Leggings">
+                    </div>
+                    <div class="card-content">
+                        <h3>High-Waist Leggings</h3>
+                        <p class="price">$39.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev-arrow">‹</button>
+            <button class="slider-arrow next-arrow">›</button>
+        </div>
+
+        <div class="slider-dots"></div>
+
+        <a class="otw-cat" href="products.html?category=Men Sportswear">See More Collection</a>
+    </section>
+
+    <!-- Category 4: CapsHats -->
+    <section class="prod-land">
+        <div class="prod-land-tit">
+            <h2>Caps & Hats</h2>
+        </div>
+
+        <div class="cards-slider-container" id="CapsHats-slider">
+            <div class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=500&fit=crop"
+                            alt="Leather Bag">
+                    </div>
+                    <div class="card-content">
+                        <h3>Leather Tote Bag</h3>
+                        <p class="price">$79.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=500&fit=crop"
+                            alt="Sunglasses">
+                    </div>
+                    <div class="card-content">
+                        <h3>Designer Sunglasses</h3>
+                        <p class="price">$49.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=500&fit=crop"
+                            alt="Scarf">
+                    </div>
+                    <div class="card-content">
+                        <h3>Silk Scarf</h3>
+                        <p class="price">$29.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev-arrow">‹</button>
+            <button class="slider-arrow next-arrow">›</button>
+        </div>
+
+        <div class="slider-dots"></div>
+
+        <a class="otw-cat" href="products.html?category=Caps & Hats">See More collection</a>
+    </section>
+
+    <!-- Category 5: Accessories -->
+    <section class="prod-land">
+        <div class="prod-land-tit">
+            <h2>Accessories</h2>
+        </div>
+
+        <div class="cards-slider-container" id="accessories-slider">
+            <div class="cards-wrapper">
+                <!-- Card 1 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=500&fit=crop"
+                            alt="Leather Bag">
+                    </div>
+                    <div class="card-content">
+                        <h3>Leather Tote Bag</h3>
+                        <p class="price">$79.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=500&fit=crop"
+                            alt="Sunglasses">
+                    </div>
+                    <div class="card-content">
+                        <h3>Designer Sunglasses</h3>
+                        <p class="price">$49.99</p>
+                        
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=500&fit=crop"
+                            alt="Scarf">
+                    </div>
+                    <div class="card-content">
+                        <h3>Silk Scarf</h3>
+                        <p class="price">$29.99</p>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-arrow prev-arrow">‹</button>
+            <button class="slider-arrow next-arrow">›</button>
+        </div>
+
+        <div class="slider-dots"></div>
+
+        <a class="otw-cat" href="products.html?category=Accessories">See More Collection</a>
+    </section>
+
+     <!--Summon Slider.js-->
+    <script src="slider.js"></script>
+    <script>
+        // Enable autoplay for product sliders and set interval
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.sliders) {
+                Object.values(window.sliders).forEach(s => {
+                    s.options.autoSlide = true;
+                    s.options.slideInterval = 4000;
+                    s.startAutoSlide();
+                });
+            }
+        });
+    </script>
+
+    <!--cat-btn-bot-->
+    <section class="concat">
+        <a href="#" class="btn cat-btn-bot">casualwear Woman</a>
+        <a href="#" class="btn cat-btn-bot">Sportwear Woman</a>
+        <a href="#" class="btn cat-btn-bot">Sportswear Man</a>
+        <a href="#" class="btn cat-btn-bot">Caps & Hats</a>
+        <a href="#" class="btn cat-btn-bot">Accessories</a>
+    </section>
+
 
 
     <!-- Contact Us Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <div class="section-title invert line">
-                <h2>Contact Us</h2>
-            </div>
             <div class="contact-container">
                 <div class="section-title section-title-center">
                     <h2>Visit Our Store</h2>
                 </div>
                 <div class="contact-maps">
                     <div class="map-item">
-                        <a
-                            href="https://www.google.com/maps/place/Sparkle+Shop+Seminyak/@-8.6886875,115.1655212,1166m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd247436d083e43:0x9243b14a79c0b74!8m2!3d-8.6886928!4d115.1680961!16s%2Fg%2F11xkh5jh_q?entry=tts&g_ep=EgoyMDI2MDExMS4wIPu8ASoASAFQAw%3D%3D&skid=d77263cb-12b1-4a8a-a6cc-330737879c98">
-                            <img src="/img/ASSET/map1.webp" alt="Contact Us" class="contact-img"></a>
-                        <div class="map-description">
-                            <h4>SPARKLE SHOP Seminyak</h4>
-                            <p>JI. Kunti I, Seminyak, Kec. Kuta, Kabupaten Badung,
-                                Bali 80361</p>
-                        </div>
-                    </div>
-                    <div class="map-item">
-                        <a
-                            href="https://www.google.com/maps/place/Sparkle+Shop+Berawa/@-8.6601435,115.1383825,1126m/data=!3m1!1e3!4m6!3m5!1s0x2dd247d598101563:0x63315e97afdaa163!8m2!3d-8.6601488!4d115.1409628!16s%2Fg%2F11wxsn2xr4?entry=tts&g_ep=EgoyMDI2MDEyOC4wIPu8ASoASAFQAw%3D%3D&skid=64fbc72e-45d2-4668-89dd-8c6240ea5cc3">
-                            <img src="/img/ASSET/map2.webp" alt="Contact Us" class="contact-img"></a>
+                        <a href="">
+                            <img src="/img/cson/1.jpg" alt="Contact Us" class="contact-img"></a>
                         <div class="map-description">
                             <h4>SPARKLE SHOP Berawa</h4>
                             <p>JI. Pantai Berawa No.41, Tibubeneng, Kec. Kuta Utara,
@@ -441,13 +702,13 @@
                     <div class="contact-item">
                         <a href="#" style="display: flex;
         align-items: flex-start;">
-                        <div class="contact-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Instagram</h4>
-                            <p>@SparkleShop<br>Follow us for latest trends</p>
-                        </div>
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>@SparkleShop<br>Follow us for latest trends</p>
+                            </div>
                         </a>
                     </div>
                     <div class="contact-item">
@@ -470,187 +731,28 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <!-- 4 text menu inline -->
-            <div class="footer-menu">
-                <a href="index.html#about-us-title" class="menu-item">About Us</a>
-                <a href="index.html#highlight" class="menu-item">Highlight</a>
-                <a href="index.html#shop" class="menu-item">Category</a>
-                <a href="#contact" class="menu-item">Contact</a>
-            </div>
             <div class="copyright">
-                <p>Copyright &copy; SPARKLE SHOP</p>
-                <a class="menu-item" onclick="showPrivacyModal();">Privacy Policy</a
+                <p>Copyright &copy; ATNHA</p>
             </div>
         </div>
-        <span class="bg-text3 ">SPARKLE</span>
     </footer>
 
     <!-- Event Popup Modal -->
-<div class="event-popup" id="event-popup">
-    <div class="event-popup-content">
-        <button class="event-popup-close" id="event-popup-close">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="event-popup-image">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Special Event" class="event-img">
-        </div>
-        <!-- Removed all text content: event-popup-text div -->
-    </div>
-</div>
-<!-- Event Popup privacy policy -->
-<div class="privacy-modal" id="privacy-modal">
-    <div class="privacy-modal-content">
-        <button class="privacy-modal-close" id="privacy-modal-close">
-            <i class="fas fa-times"></i>
-        </button>
-
-        <div class="privacy-modal-header">
-            <h2>PRIVACY POLICY</h2>
-            <p class="privacy-date">Last Updated: February 03, 2026</p>
-        </div>
-
-        <div class="privacy-modal-body">
-            <div class="privacy-section">
-                <p>This Privacy Notice for <strong>Sparkle Shop</strong> ("<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"), describes how and why we might access, collect, store, use, and/or share ("<strong>process</strong>") your personal information when you use our services ("<strong>Services</strong>"), including when you:</p>
-                <ul>
-                    <li>Visit our website at <a href="https://sparkle.shop" target="_blank">https://sparkle.shop</a> or any website of ours that links to this Privacy Notice</li>
-                    <li>Engage with us in other related ways, including any marketing or events</li>
-                </ul>
-                <p><strong>Questions or concerns?</strong> Reading this Privacy Notice will help you understand your privacy rights and choices. We are responsible for making decisions about how your personal information is processed. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at <a href="mailto:test@gmail.com">test@gmail.com</a>.</p>
+    <div class="event-popup" id="event-popup">
+        <div class="event-popup-content">
+            <button class="event-popup-close" id="event-popup-close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="event-popup-image">
+                <img src="/img/event/1.webp"
+                    alt="Special Event" class="event-img">
             </div>
-
-            <div class="privacy-section">
-                <h3>SUMMARY OF KEY POINTS</h3>
-                <p><em>This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our <a href="#toc">table of contents</a> below to find the section you are looking for.</em></p>
-                <p><strong>What personal information do we process?</strong> When you visit, use, or navigate our Services, we may process personal information depending on how you interact with us and the Services, the choices you make, and the products and features you use. Learn more about <a href="#personalinfo">personal information you disclose to us</a>.</p>
-                <p><strong>Do we process any sensitive personal information?</strong> Some of the information may be considered "special" or "sensitive" in certain jurisdictions, for example your racial or ethnic origins, sexual orientation, and religious beliefs. We do not process sensitive personal information.</p>
-                <p><strong>Do we collect any information from third parties?</strong> We do not collect any information from third parties.</p>
-                <p><strong>How do we process your information?</strong> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent. We process your information only when we have a valid legal reason to do so. Learn more about <a href="#infouse">how we process your information</a>.</p>
-                <p><strong>In what situations and with which parties do we share personal information?</strong> We may share information in specific situations and with specific third parties. Learn more about <a href="#whoshare">when and with whom we share your personal information</a>.</p>
-                <p><strong>How do we keep your information safe?</strong> We have adequate organizational and technical processes and procedures in place to protect your personal information. However, no electronic transmission over the internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Learn more about <a href="#infosafe">how we keep your information safe</a>.</p>
-                <p><strong>What are your rights?</strong> Depending on where you are located geographically, the applicable privacy law may mean you have certain rights regarding your personal information. Learn more about <a href="#privacyrights">your privacy rights</a>.</p>
-                <p><strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is by submitting a <a href="https://app.termly.io/dsar/7a95f3a1-95a6-40b2-bc2f-18d2627198b3" target="_blank">data subject access request</a>, or by contacting us. We will consider and act upon any request in accordance with applicable data protection laws.</p>
-                <p>Want to learn more about what we do with any information we collect? <a href="#toc">Review the Privacy Notice in full</a>.</p>
-            </div>
-
-            <div class="privacy-section" id="toc">
-                <h3>TABLE OF CONTENTS</h3>
-                <ol>
-                    <li><a href="#infocollect">WHAT INFORMATION DO WE COLLECT?</a></li>
-                    <li><a href="#infouse">HOW DO WE PROCESS YOUR INFORMATION?</a></li>
-                    <li><a href="#whoshare">WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</a></li>
-                    <li><a href="#inforetain">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
-                    <li><a href="#infosafe">HOW DO WE KEEP YOUR INFORMATION SAFE?</a></li>
-                    <li><a href="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
-                    <li><a href="#DNT">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
-                    <li><a href="#policyupdates">DO WE MAKE UPDATES TO THIS NOTICE?</a></li>
-                    <li><a href="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></li>
-                    <li><a href="#request">HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</a></li>
-                </ol>
-            </div>
-
-            <div class="privacy-section" id="infocollect">
-                <h3>1. WHAT INFORMATION DO WE COLLECT?</h3>
-                <h4 id="personalinfo">Personal information you disclose to us</h4>
-                <p><em><strong>In Short:</strong> We collect personal information that you provide to us.</em></p>
-                <p>We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.</p>
-                
-                <h4 id="sensitiveinfo">Sensitive Information.</h4>
-                <p>We do not process sensitive information.</p>
-                
-                <p>All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.</p>
-            </div>
-
-            <div class="privacy-section" id="infouse">
-                <h3>2. HOW DO WE PROCESS YOUR INFORMATION?</h3>
-                <p><em><strong>In Short:</strong> We process your information to provide, improve, and administer our Services, communicate with you, for security and fraud prevention, and to comply with law. We may also process your information for other purposes with your consent.</em></p>
-                <p><strong>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</strong></p>
-                <ul>
-                    <li><strong>To facilitate account creation and authentication and otherwise manage user accounts.</strong> We may process your information so you can create and log in to your account, as well as keep your account in working order.</li>
-                    <li><strong>To deliver and facilitate delivery of services to the user.</strong> We may process your information to provide you with the requested service.</li>
-                    <li><strong>To respond to user inquiries/offer support to users.</strong> We may process your information to respond to your inquiries and solve any potential issues you might have with the requested service.</li>
-                    <li><strong>To send administrative information to you.</strong> We may process your information to send you details about our products and services, changes to our terms and policies, and other similar information.</li>
-                    <li><strong>To fulfill and manage your orders.</strong> We may process your information to fulfill and manage your orders, payments, returns, and exchanges made through the Services.</li>
-                    <li><strong>To enable user-to-user communications.</strong> We may process your information if you choose to use any of our offerings that allow for communication with another user.</li>
-                    <li><strong>To request feedback.</strong> We may process your information when necessary to request feedback and to contact you about your use of our Services.</li>
-                    <li><strong>To send you marketing and promotional communications.</strong> We may process the personal information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. You can opt out of our marketing emails at any time. For more information, see "<a href="#privacyrights">WHAT ARE YOUR PRIVACY RIGHTS?</a>" below.</li>
-                    <li><strong>To protect our Services.</strong> We may process your information as part of our efforts to keep our Services safe and secure, including fraud monitoring and prevention.</li>
-                    <li><strong>To identify usage trends.</strong> We may process information about how you use our Services to better understand how they are being used so we can improve them.</li>
-                </ul>
-            </div>
-
-            <div class="privacy-section" id="whoshare">
-                <h3>3. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?</h3>
-                <p><em><strong>In Short:</strong> We may share information in specific situations described in this section and/or with the following third parties.</em></p>
-                <p>We may need to share your personal information in the following situations:</p>
-                <ul>
-                    <li><strong>Business Transfers.</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
-                </ul>
-            </div>
-
-            <div class="privacy-section" id="inforetain">
-                <h3>4. HOW LONG DO WE KEEP YOUR INFORMATION?</h3>
-                <p><em><strong>In Short:</strong> We keep your information for as long as necessary to fulfill the purposes outlined in this Privacy Notice unless otherwise required by law.</em></p>
-                <p>We will only keep your personal information for as long as it is necessary for the purposes set out in this Privacy Notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).</p>
-                <p>When we have no ongoing legitimate business need to process your personal information, we will either delete or anonymize such information, or, if this is not possible (for example, because your personal information has been stored in backup archives), then we will securely store your personal information and isolate it from any further processing until deletion is possible.</p>
-            </div>
-
-            <div class="privacy-section" id="infosafe">
-                <h3>5. HOW DO WE KEEP YOUR INFORMATION SAFE?</h3>
-                <p><em><strong>In Short:</strong> We aim to protect your personal information through a system of organizational and technical security measures.</em></p>
-                <p>We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security and improperly collect, access, steal, or modify your information. Although we will do our best to protect your personal information, transmission of personal information to and from our Services is at your own risk. You should only access the Services within a secure environment.</p>
-            </div>
-
-            <div class="privacy-section" id="privacyrights">
-                <h3>6. WHAT ARE YOUR PRIVACY RIGHTS?</h3>
-                <p><em><strong>In Short:</strong> You may review, change, or terminate your account at any time, depending on your country, province, or state of residence.</em></p>
-                
-                <h4 id="withdrawconsent">Withdrawing your consent:</h4>
-                <p>If we are relying on your consent to process your personal information, which may be express and/or implied consent depending on the applicable law, you have the right to withdraw your consent at any time. You can withdraw your consent at any time by contacting us by using the contact details provided in the section "<a href="#contact">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a>" below.</p>
-                <p>However, please note that this will not affect the lawfulness of the processing before its withdrawal nor, when applicable law allows, will it affect the processing of your personal information conducted in reliance on lawful processing grounds other than consent.</p>
-                
-                <p>If you have questions or comments about your privacy rights, you may email us at <a href="mailto:test@gmail.com">test@gmail.com</a>.</p>
-            </div>
-
-            <div class="privacy-section" id="DNT">
-                <h3>7. CONTROLS FOR DO-NOT-TRACK FEATURES</h3>
-                <p>Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference not to have data about your online browsing activities monitored and collected. At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As such, we do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online. If a standard for online tracking is adopted that we must follow in the future, we will inform you about that practice in a revised version of this Privacy Notice.</p>
-            </div>
-
-            <div class="privacy-section" id="policyupdates">
-                <h3>8. DO WE MAKE UPDATES TO THIS NOTICE?</h3>
-                <p><em><strong>In Short:</strong> Yes, we will update this notice as necessary to stay compliant with relevant laws.</em></p>
-                <p>We may update this Privacy Notice from time to time. The updated version will be indicated by an updated "Revised" date at the top of this Privacy Notice. If we make material changes to this Privacy Notice, we may notify you either by prominently posting a notice of such changes or by directly sending you a notification. We encourage you to review this Privacy Notice frequently to be informed of how we are protecting your information.</p>
-            </div>
-
-            <div class="privacy-section" id="contact">
-                <h3>9. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h3>
-                <p>If you have questions or comments about this notice, you may email us at <a href="mailto:test@gmail.com">test@gmail.com</a> or contact us by post at:</p>
-                <address>
-                    Sparkle Shop<br>
-                    JI. Kunti I, Seminyak, Kec. Kuta,<br>
-                    Kabupaten Badung, Bali 80361<br>
-                    Indonesia
-                </address>
-            </div>
-
-            <div class="privacy-section" id="request">
-                <h3>10. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h3>
-                <p>Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, details about how we have processed it, correct inaccuracies, or delete your personal information. You may also have the right to withdraw your consent to our processing of your personal information. These rights may be limited in some circumstances by applicable law. To request to review, update, or delete your personal information, please fill out and submit a <a href="https://app.termly.io/dsar/7a95f3a1-95a6-40b2-bc2f-18d2627198b3" target="_blank">data subject access request</a>.</p>
-                <div style="display: none;">
-                    <a class="privacy123" href="https://app.termly.io/dsar/7a95f3a1-95a6-40b2-bc2f-18d2627198b3"></a>
-                </div>
-            </div>
-
-            <div class="privacy-section">
-                <p><em>This Privacy Policy was created using Termly's <a href="https://termly.io/products/privacy-policy-generator/" target="_blank">Privacy Policy Generator</a></em></p>
-            </div>
+            <!-- Removed all text content: event-popup-text div -->
         </div>
     </div>
-</div>
+    <!-- Event Popup privacy policy -->
 
-<div class="privacy-modal-overlay" id="privacy-modal-overlay"></div>
+    <div class="privacy-modal-overlay" id="privacy-modal-overlay"></div>
 
     <div class="privacy-modal-overlay" id="privacy-modal-overlay"></div>
 
@@ -748,59 +850,6 @@
             },
         });
 
-
-        //privacy policy popup.js
-        // Privacy Modal Functionality
-        const privacyModal = document.getElementById('privacy-modal');
-        const privacyModalClose = document.getElementById('privacy-modal-close');
-        const privacyModalOverlay = document.getElementById('privacy-modal-overlay');
-
-        // Function to show privacy modal
-        function showPrivacyModal() {
-            privacyModal.classList.add('active');
-            privacyModalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        // Function to close privacy modal
-        function closePrivacyModal() {
-            privacyModal.classList.remove('active');
-            privacyModalOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-
-            // Store acceptance in localStorage
-            localStorage.setItem('privacyAccepted', 'true');
-        }
-
-        // Event listeners for privacy modal
-        privacyModalClose.addEventListener('click', closePrivacyModal);
-        privacyModalOverlay.addEventListener('click', closePrivacyModal);
-
-        // Close with Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && privacyModal.classList.contains('active')) {
-                closePrivacyModal();
-            }
-        });
-
-        // Show privacy modal on page load if not accepted
-        window.addEventListener('load', () => {
-            const privacyAccepted = localStorage.getItem('privacyAccepted');
-
-            // Show after 3 seconds if not accepted yet
-            if (!privacyAccepted) {
-                setTimeout(() => {
-                    showPrivacyModal();
-                }, 3000);
-            }
-        });
-
-        // Optional: Add a trigger to manually show the privacy modal
-        // You can add this to your footer or menu if needed
-        function showPrivacyPolicy() {
-            showPrivacyModal();
-        }
-
         //event popup.js
         // Get DOM elements
         const eventPopup = document.getElementById('event-popup');
@@ -868,7 +917,7 @@
         });
         //on off pop    up
         //setPopupEnabled(true);
-        setPopupEnabled(false);
+        setPopupEnabled(true);
 
     </script>
     <script src="shop-popup.js"></script>

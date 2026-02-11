@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>ANTHA</title>
+    <link rel="icon" href="Icon_sprkl.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="popup-container"></div>
+
+    <div class="top-bar"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <!-- Desktop Header (shown on larger screens) -->
+            <div class="header-container desktop-header prods-header">
+                <div class="header-nav ">
+                    <a href="index.html" class="header-logo">ATHNA</a>
+                </div>
+            </div>
+        </div>
+
+            <!-- Mobile Header (shown on smaller screens) -->
+            <div class="mobile-header">
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-nav">
+                    <a href="index.html" class="header-logo">ATHNA</a>
+                </div>
+                <div class="mobile-header-icons">
+      <i class="fas fa-bars header-icon hidden"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="mobile-nav-close" id="mobile-nav-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html"><i class="fas "></i> Home</a></li>
+            <li><a href="index.html#shop"><i class="fas "></i> Category</a></li>
+            <li><a href="#contact"></i> Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay for mobile menu -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Shop item Section -->
+    <section class="shopcon">
+        <div class="container">
+            <div class="section-title prods-title">
+                <div class="bg">
+                <h2 id="page-title ">All Products</h2>
+                </div>
+                <a href="index.html" class="btn">Home</a>
+            </div>
+            <div id="category-filter-container" class="category-filter-container"></div>
+            <div id="shop-container" class="shop-container"></div>
+        </div>
+        <div class="pagination-container" id="pagination-container"></div>
+    </section>
+
+        <!--cat-btn-bot-->
+    <section class="concat">
+        <a href="#" class="btn cat-btn-bot">casualwear Woman</a>
+        <a href="#" class="btn cat-btn-bot">Sportwear Woman</a>
+        <a href="#" class="btn cat-btn-bot">Sportswear Man</a>
+        <a href="#" class="btn cat-btn-bot">Caps & Hats</a>
+        <a href="#" class="btn cat-btn-bot">Accessories</a>
+    </section>
+
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title invert line">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-container">
+                <div class="section-title section-title-center">
+                    <h2>Visit Our Store</h2>
+                </div>
+                <div class="contact-maps">
+                    <div class="map-item">
+                        <a href="">
+                            <img src="/img/cson/1.jpg" alt="Contact Us" class="contact-img"></a>
+                        <div class="map-description">
+                            <h4>SPARKLE SHOP Berawa</h4>
+                            <p>JI. Pantai Berawa No.41, Tibubeneng, Kec. Kuta Utara,
+                                Kabupaten Badung, Bali 80361</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <a href="https://www.facebook.com/profile.php?id=100084114227911" style="display: flex;
+        align-items: flex-start;">
+                            <div class="contact-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Facebook</h4>
+                                <p>Sparkle Shop</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="#" style="display: flex;
+        align-items: flex-start;">
+                            <div class="contact-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Instagram</h4>
+                                <p>@SparkleShop<br>Follow us for latest trends</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://wa.me/6281228636230" style="display: flex;
+        align-items: flex-start;">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>WhatsApp</h4>
+                                <p>+62 8122 8636 230<br>Chat to order our products</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- 4 text menu inline -->
+            <div class="footer-menu">
+                <a href="index.html#about-us-title" class="menu-item">About Us</a>
+                <a href="index.html#highlight" class="menu-item">Highlight</a>
+                <a href="index.html#shop" class="menu-item">Category</a>
+                <a href="#contact" class="menu-item">Contact</a>
+            </div>
+            <div class="copyright">
+                <p>Copyright &copy; SPARKLE SHOP</p>
+            </div>
+        </div>
+        <span class="bg-text3 ">SPARKLE</span>
+    </footer>
+
+    <!-- Popup Container (will be created by JavaScript) -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="shop.js"></script>
+    <script>
+        // Mobile menu functionality
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        const overlay = document.getElementById('overlay');
+
+        // Open mobile menu
+        hamburgerMenu.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close mobile menu
+        function closeMobileMenu() {
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileNavClose.addEventListener('click', closeMobileMenu);
+        overlay.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close menu with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Swiper initialization
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            slidesPerView: 'auto',
+            loop: true,
+            spaceBetween: 20,
+            centeredSlides: false,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                    centeredSlides: true,
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    centeredSlides: false,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                },
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                }
+            },
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+
+</html>
