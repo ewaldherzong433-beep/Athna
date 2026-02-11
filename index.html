@@ -144,11 +144,9 @@
     <!-- Highlight Section with Card Swiper -->
     <section class="highlight line" id="highlight">
         <div class="container">
-
             <div class="section-title High-tit invert">
                 <h2>Limited Drop</h2>
             </div>
-
             <!-- Swiper Slider -->
             <div class="swiper">
                 <div class="swiper-wrapper">
@@ -158,12 +156,8 @@
                             <div class="card-img-container">
                                 <img src="./img/ASSEET/Highlight/7.webp" class="card-img">
                             </div>
-                             </div>
-                            <div class="card-content">
-                            <!-- <div class="card-tag">New</div> -->
                         </div>
                     </div>
-
                     <!-- Card 2 -->
                     <div class="swiper-slide" onclick="showProductPopup(49)">
                         <div class="trending-card">
@@ -265,384 +259,110 @@
             </div>
     </section>
 
-    <!-- product landing Section -->
-     <!-- Category 1: casualwearWoman -->
-    <section class="prod-land">
-        <div class="prod-land-tit">
-            <h2>Casualwear Women</h2>
-        </div>
+    <!-- product landing Section (generated) -->
+    <div id="product-landing-container"></div>
 
-        <div class="cards-slider-container" id="casualwear-slider">
-            <div class="cards-wrapper">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop&crop=face"
-                            alt="Casual T-Shirt">
+    <script>
+    // Safe call wrapper: queue popup request if shop-popup hasn't initialized yet
+    function safeShowProductPopup(id){
+      if(typeof showProductPopup === 'function'){
+        showProductPopup(id);
+      } else {
+        window._pendingProductPopup = id;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if(window._pendingProductPopup && typeof showProductPopup === 'function'){
+        showProductPopup(window._pendingProductPopup);
+        window._pendingProductPopup = null;
+      }
+    });
+
+    (function(){
+      const categories = [
+        { key: 'Women casualwear', title: 'Casualwear Women', id:'casualwear-slider', query:'Women%20casualwear'},
+        { key: 'Women Sportwear', title: 'Sportwear Women', id:'Sportwear-slider', query:'Women%20Sportwear'},
+        { key: 'Men Sportswear', title: 'Sportswear Men', id:'sportswearMan-slider', query:'Men%20Sportswear'},
+        { key: 'Caps & Hats', title: 'Caps & Hats', id:'CapsHats-slider', query:'Caps%20%26%20Hats'},
+        { key: 'Accessories', title: 'Accessories', id:'accessories-slider', query:'Accessories'}
+      ];
+
+      function fmtPrice(p){
+        if(p === undefined || p === null) return '';
+        return 'Rp ' + Math.round(p).toLocaleString();
+      }
+
+      fetch('./products.json')
+        .then(r=>r.json())
+        .then(products=>{
+          const container = document.getElementById('product-landing-container');
+          categories.forEach(cat=>{
+            const items = products.filter(p=>p.category===cat.key).slice(0,8);
+            if(items.length===0) return;
+            const section = document.createElement('section');
+            section.className = 'prod-land';
+            section.innerHTML = `
+              <div class="prod-land-tit"><h2>${cat.title}</h2></div>
+              <div class="cards-slider-container" id="${cat.id}">
+                <div class="cards-wrapper">
+                  ${items.map(item=>`
+                    <div class="product-card" onclick="safeShowProductPopup(${item.id})" data-id="${item.id}" role="button" tabindex="0">
+                      <div class="card-image"><img src="${item.images && item.images[0] ? item.images[0] : 'https://via.placeholder.com/400x500?text=No+image'}" alt="${item.name}"></div>
+                      <div class="card-content">
+                        <h3>${item.name}</h3>
+                        <p class="price">${fmtPrice(item.price)}</p>
+                      </div>
                     </div>
-                    <div class="card-content">
-                        <h3>Relaxed Fit T-Shirt</h3>
-                        <p class="price">$29.99</p>
-                        
-                    </div>
+                  `).join('')}
                 </div>
+                <button class="slider-arrow prev-arrow">‹</button>
+                <button class="slider-arrow next-arrow">›</button>
+              </div>
+              <div class="slider-dots"></div>
+              <a class="otw-cat" href="./Products.html?category=${cat.query}">See More Collection</a>
+            `;
+            container.appendChild(section);
+          });
 
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=500&fit=crop"
-                            alt="Denim Jacket">
-                    </div>
-                    <div class="card-content">
-                        <h3>Classic Denim Jacket</h3>
-                        <p class="price">$59.99</p>
-                        
-                    </div>
-                </div>
+          // initialize any new sliders in case slider.js already ran
+          function initNewSliders() {
+            const nodes = document.querySelectorAll('.cards-slider-container[id]');
+            nodes.forEach(containerEl=>{
+              const id = containerEl.id;
+              if(!id) return;
+              window.sliders = window.sliders || {};
+              if(window.sliders[id]) return;
+              if(typeof CardSlider === 'function'){
+                window.sliders[id] = new CardSlider(id);
+                window.sliders[id].options.autoSlide = true;
+                window.sliders[id].options.slideInterval = 4000;
+                window.sliders[id].startAutoSlide();
+              }
+            });
+          }
+          setTimeout(initNewSliders, 100);
+          window.addEventListener('load', initNewSliders);
 
-                <!-- Card 3 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=400&h=500&fit=crop"
-                            alt="Linen Trousers">
-                    </div>
-                    <div class="card-content">
-                        <h3>Linen Blend Trousers</h3>
-                        <p class="price">$44.99</p>
-                        
-                    </div>
-                </div>
+          // Accessibility: open popup when focused card is activated via Enter or Space
+          document.addEventListener('keydown', (e) => {
+            const active = document.activeElement;
+            if (!active || !active.classList) return;
+            if (!active.classList.contains('product-card')) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const id = active.dataset.id;
+              if (id) showProductPopup(id);
+            }
+          });
+        })
+        .catch(err=>console.error('Failed to load products.json',err));
+    })();
+    </script>
 
-                <!-- Card 4 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop"
-                            alt="Summer Dress">
-                    </div>
-                    <div class="card-content">
-                        <h3>Summer Midi Dress</h3>
-                        <p class="price">$49.99</p>
-                        
-                    </div>
-                </div>
 
-                <!-- Card 5 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1544441893-675973e31985?w=400&h=500&fit=crop"
-                            alt="Knit Sweater">
-                    </div>
-                    <div class="card-content">
-                        <h3>Oversized Knit Sweater</h3>
-                        <p class="price">$54.99</p>
-                        
-                    </div>
-                </div>
 
-                <!-- Card 6 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?w=400&h=500&fit=crop"
-                            alt="Denim Skirt">
-                    </div>
-                    <div class="card-content">
-                        <h3>A-Line Denim Skirt</h3>
-                        <p class="price">$39.99</p>
-                        
-                    </div>
-                </div>
 
-                <!-- Card 7 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=500&fit=crop"
-                            alt="Casual Blouse">
-                    </div>
-                    <div class="card-content">
-                        <h3>Silk Blend Blouse</h3>
-                        <p class="price">$42.99</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <button class="slider-arrow prev-arrow">‹</button>
-            <button class="slider-arrow next-arrow">›</button>
-        </div>
-
-        <div class="slider-dots"></div>
-
-        <a class="otw-cat" href="./Products.html?category=Women%20casualwear">See More Collection</a>
-    </section>
-
-    <!-- Category 2: SportwearWoman -->
-    <section class="prod-land">
-        <div class="prod-land-tit">
-            <h2>Sportwear Women</h2>
-        </div>
-
-        <div class="cards-slider-container" id="Sportwear-slider">
-            <div class="cards-wrapper">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop"
-                            alt="Business Suit">
-                    </div>
-                    <div class="card-content">
-                        <h3>Tailored Blazer</h3>
-                        <p class="price">$89.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?w=400&h=500&fit=crop"
-                            alt="Evening Gown">
-                    </div>
-                    <div class="card-content">
-                        <h3>Evening Gown</h3>
-                        <p class="price">$129.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1572804013427-4d7ca7268217?w=400&h=500&fit=crop"
-                            alt="Office Dress">
-                    </div>
-                    <div class="card-content">
-                        <h3>Office Sheath Dress</h3>
-                        <p class="price">$79.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop"
-                            alt="Sportwear Pants">
-                    </div>
-                    <div class="card-content">
-                        <h3>Wide Leg Trousers</h3>
-                        <p class="price">$64.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1582418702059-97ebafb35d09?w=400&h=500&fit=crop"
-                            alt="Cocktail Dress">
-                    </div>
-                    <div class="card-content">
-                        <h3>Cocktail Dress</h3>
-                        <p class="price">$99.99</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <button class="slider-arrow prev-arrow">‹</button>
-            <button class="slider-arrow next-arrow">›</button>
-        </div>
-
-        <div class="slider-dots"></div>
-
-        <a class="otw-cat" href="./Products.html?category=Women Sportwear">See More Collection</a>
-    </section>
-
-    <!-- Category 3: SportswearMan -->
-    <section class="prod-land">
-        <div class="prod-land-tit">
-            <h2>Sportswear Men</h2>
-        </div>
-
-        <div class="cards-slider-container" id="sportswearMan-slider">
-            <div class="cards-wrapper">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1594736797933-d0301c3c14f9?w=400&h=500&fit=crop"
-                            alt="Yoga Set">
-                    </div>
-                    <div class="card-content">
-                        <h3>Yoga Set</h3>
-                        <p class="price">$49.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=400&h=500&fit=crop"
-                            alt="Running Shoes">
-                    </div>
-                    <div class="card-content">
-                        <h3>Running Shoes</h3>
-                        <p class="price">$89.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?w=400&h=500&fit=crop"
-                            alt="Training Jacket">
-                    </div>
-                    <div class="card-content">
-                        <h3>Training Jacket</h3>
-                        <p class="price">$59.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=500&fit=crop"
-                            alt="Leggings">
-                    </div>
-                    <div class="card-content">
-                        <h3>High-Waist Leggings</h3>
-                        <p class="price">$39.99</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <button class="slider-arrow prev-arrow">‹</button>
-            <button class="slider-arrow next-arrow">›</button>
-        </div>
-
-        <div class="slider-dots"></div>
-
-        <a class="otw-cat" href="./Products.html?category=Men Sportswear">See More Collection</a>
-    </section>
-
-    <!-- Category 4: CapsHats -->
-    <section class="prod-land">
-        <div class="prod-land-tit">
-            <h2>Caps & Hats</h2>
-        </div>
-
-        <div class="cards-slider-container" id="CapsHats-slider">
-            <div class="cards-wrapper">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=500&fit=crop"
-                            alt="Leather Bag">
-                    </div>
-                    <div class="card-content">
-                        <h3>Leather Tote Bag</h3>
-                        <p class="price">$79.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=500&fit=crop"
-                            alt="Sunglasses">
-                    </div>
-                    <div class="card-content">
-                        <h3>Designer Sunglasses</h3>
-                        <p class="price">$49.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=500&fit=crop"
-                            alt="Scarf">
-                    </div>
-                    <div class="card-content">
-                        <h3>Silk Scarf</h3>
-                        <p class="price">$29.99</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <button class="slider-arrow prev-arrow">‹</button>
-            <button class="slider-arrow next-arrow">›</button>
-        </div>
-
-        <div class="slider-dots"></div>
-
-        <a class="otw-cat" href="./Products.html?category=Caps & Hats">See More collection</a>
-    </section>
-
-    <!-- Category 5: Accessories -->
-    <section class="prod-land">
-        <div class="prod-land-tit">
-            <h2>Accessories</h2>
-        </div>
-
-        <div class="cards-slider-container" id="accessories-slider">
-            <div class="cards-wrapper">
-                <!-- Card 1 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=400&h=500&fit=crop"
-                            alt="Leather Bag">
-                    </div>
-                    <div class="card-content">
-                        <h3>Leather Tote Bag</h3>
-                        <p class="price">$79.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=500&fit=crop"
-                            alt="Sunglasses">
-                    </div>
-                    <div class="card-content">
-                        <h3>Designer Sunglasses</h3>
-                        <p class="price">$49.99</p>
-                        
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=500&fit=crop"
-                            alt="Scarf">
-                    </div>
-                    <div class="card-content">
-                        <h3>Silk Scarf</h3>
-                        <p class="price">$29.99</p>
-                        
-                    </div>
-                </div>
-            </div>
-
-            <button class="slider-arrow prev-arrow">‹</button>
-            <button class="slider-arrow next-arrow">›</button>
-        </div>
-
-        <div class="slider-dots"></div>
-
-        <a class="otw-cat" href="./Products.html?category=Accessories">See More Collection</a>
-    </section>
-
-     <!--Summon Slider.js-->
     <script src="slider.js"></script>
     <script>
         // Enable autoplay for product sliders and set interval
@@ -671,55 +391,46 @@
     <!-- Contact Us Section -->
     <section class="contact" id="contact">
         <div class="container">
+            <div class="section-title invert line">
+                <h2>Contact Us</h2>
+            </div>
             <div class="contact-container">
                 <div class="section-title section-title-center">
                     <h2>Visit Our Store</h2>
                 </div>
                 <div class="contact-maps">
                     <div class="map-item">
-                        <a href="">
-                            <img src="./img/cson/1.jpg" alt="Contact Us" class="contact-img"></a>
+                        <a href="https://maps.app.goo.gl/tbqe4vxBNfmpuazx9">
+                            <img src="./img/ASSEET/map.webp" alt="Contact Us" class="contact-img"></a>
                         <div class="map-description">
-                            <h4>SPARKLE SHOP Berawa</h4>
-                            <p>JI. Pantai Berawa No.41, Tibubeneng, Kec. Kuta Utara,
-                                Kabupaten Badung, Bali 80361</p>
+                            <h4>ATHNA STORE</h4>
+                            <p>Jl. Pantai Berawa, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-info">
+
                     <div class="contact-item">
-                        <a href="https://www.facebook.com/profile.php?id=100084114227911" style="display: flex;
+                        <a href="https://www.instagram.com/athna1111" style="display: flex;
         align-items: flex-start;">
                             <div class="contact-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Facebook</h4>
-                                <p>Sparkle Shop</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="#" style="display: flex;
-        align-items: flex-start;">
-                            <div class="contact-icon">
-                                <i class="fab fa-instagram"></i>
+                                <i class="fab fa-instagram" style="color: #C13584;"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>Instagram</h4>
-                                <p>@SparkleShop<br>Follow us for latest trends</p>
+                                <p>@athna1111<br>Follow us for latest trends</p>
                             </div>
                         </a>
                     </div>
                     <div class="contact-item">
-                        <a href="https://wa.me/6281228636230" style="display: flex;
+                        <a href="https://wa.me/6287864853508" style="display: flex;
         align-items: flex-start;">
                             <div class="contact-icon">
-                                <i class="fab fa-whatsapp"></i>
+                                <i class="fab fa-whatsapp" style="color:#128C7E;"></i>
                             </div>
                             <div class="contact-details">
                                 <h4>WhatsApp</h4>
-                                <p>+62 8122 8636 230<br>Chat to order our Products</p>
+                                <p>+62 878‑6485‑3508 230<br>Chat to order our Products</p>
                             </div>
                         </a>
                     </div>
@@ -744,8 +455,7 @@
                 <i class="fas fa-times"></i>
             </button>
             <div class="event-popup-image">
-                <img src="./img/event/1.webp"
-                    alt="Special Event" class="event-img">
+                <img src="./img/event/1.webp" alt="Special Event" class="event-img">
             </div>
             <!-- Removed all text content: event-popup-text div -->
         </div>

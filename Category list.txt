@@ -1,0 +1,11 @@
+"Women casualwear"
+"Women Sportwear"
+"Men Sportswear"
+"Caps & Hats"
+"Accessories"
+
+./products.html?category=Women casualwear
+./products.html?category=Women Sportwear
+./products.html?category=Men Sportswear
+./products.html?category=Caps & Hats
+./products.html?category=Accessories
