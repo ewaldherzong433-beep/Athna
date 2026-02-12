@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: poppins;
+    z-index: 1;
 }
 
 :root {
@@ -79,7 +80,7 @@ header {
 }
 
 .container {
-    max-width: 1200px;
+       max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -309,15 +310,17 @@ header {
     background-position: center;
     position: relative;
     overflow: hidden;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
     margin-top: 2vw;
     border-top-right-radius: 150px;
     border-bottom-left-radius: 150px;
-    /* Tambahkan ini untuk mengatur tinggi hero */
     height: auto;
     min-height: 600px;
-    /* Sesuaikan dengan padding yang ada */
     margin-top: 150px;
+    /* Remove filter: brightness(50%) from here */
+    
+    /* Add this for multiple backgrounds support */
+    background-blend-mode: overlay;
 }
 
 /* Container untuk konten hero */
@@ -415,27 +418,22 @@ header {
     align-items: start;
     justify-content: center;
     margin: 80px auto;
+    
 
 
 }
 
 .about-tag {
-    display: flex;
-    z-index: 5;
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    position: relative;
+    align-items: start;
     justify-content: center;
-    background-color: #46483B;
-    position: absolute;
-    bottom: 2.8vw;
-    left: 1.05vw;
-    font-size: 2vw;
-    padding: 0.6vw;
-
-    border-bottom-left-radius: 15px;
-    border-top-right-radius: 40px;
-    font-family: var(--font2);
-    color: var(--background);
-    text-align: center;
-    width: 44vw;
+    margin: 80px auto;
 }
 
 .bg-img1 {
@@ -443,13 +441,13 @@ header {
     top: 7vw;
     left: -10vw;
     transform: scale(160%, 160%);
-    z-index: 4;
-    margin-top: 90px;
+    z-index: -1;
+    margin-top: 20px;
 }
 
 .about-picture {
     grid-column: 1;
-    position: relative;
+    position: relative; /* Add this - makes this the positioning context */
 }
 
 .about-picture img {
@@ -458,7 +456,48 @@ header {
     object-fit: cover;
     display: block;
     border-radius: 270px 20px 20px 20px;
+}
 
+
+.about-tag {
+    display: flex;
+    z-index: 5;
+    justify-content: center;
+    background-color: #46483B;
+    position: absolute;
+    bottom: 20px; /* Fixed position from bottom of .about-picture */
+    left: 20px; /* Fixed position from left of .about-picture */
+    font-size: 2vw;
+    padding: 0.6vw 1.2vw;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 40px;
+    font-family: var(--font2);
+    color: var(--background);
+    text-align: center;
+    width: auto; /* Change from fixed width to auto */
+    min-width: 200px; /* Minimum width */
+    max-width: 80%; /* Prevent overflow */
+    white-space: nowrap; /* Keep text on one line */
+}
+
+@media (max-width: 768px) {
+    .about-tag {
+        bottom: 15px;
+        left: 15px;
+        font-size: 3vw;
+        padding: 8px 16px;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-tag {
+        bottom: 10px;
+        left: 10px;
+        font-size: 4vw;
+        padding: 6px 12px;
+        min-width: 140px;
+    }
 }
 
 .container.squish-container {
@@ -502,8 +541,15 @@ header {
     padding: 80px 0 40px;
     background-color: var(--primary-color);
     overflow: hidden;
+    z-index: 2;
     
 }
+
+.highlight.container{
+ 
+}
+
+
 
 .highlight.container {
     height: 900px;
@@ -531,10 +577,14 @@ header {
     height: auto;
     padding: 60px 20px 40px;
     position: relative;
+    
 }
+
+
 
 .swiper-wrapper {
     align-items: center;
+    width: 90%;
 }
 
 .swiper-slide {
@@ -631,7 +681,9 @@ header {
     transition: all 0.3s ease;
     top: 50%;
     transform: translateY(-50%);
+    
     margin-top: 0;
+    
 }
 
 .swiper-button-next:after,
@@ -649,10 +701,14 @@ header {
 
 .swiper-button-prev {
     left: 20px;
+    transform: translateX(-40%) translateY(-50%);
+    z-index: 4 !important;
 }
 
 .swiper-button-next {
     right: 20px;
+    transform: translateX(40%) translateY(-50%);
+    z-index: 4 !important;
 }
 
 .swiper-pagination {
@@ -812,11 +868,6 @@ header {
         width: 90%;
         max-width: 320px;
     }
-
-    .card-img-container {
-        height: 200px;
-    }
-
     .card-content {
         padding: 18px;
     }
@@ -889,11 +940,6 @@ header {
         border-top-left-radius: 100px;
         border-bottom-right-radius: 100px;
     }
-
-    .card-img-container {
-        height: 180px;
-    }
-
     .card-content {
         padding: 15px;
     }
@@ -942,9 +988,6 @@ header {
         max-width: 280px;
     }
 
-    .card-img-container {
-        height: 160px;
-    }
 
     .card-content {
         padding: 12px;
@@ -995,9 +1038,6 @@ header {
         padding: 20px 15px;
     }
 
-    .card-img-container {
-        height: 150px;
-    }
 
     .card-content {
         padding: 15px;
@@ -1179,7 +1219,7 @@ header {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 100%;
     height: 3px;
     background: var(--text-on-primary);
 }
@@ -2339,7 +2379,7 @@ footer {
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding-bottom: 11vw;
+    padding-bottom: 1vw;
 }
 
 footer .container {
