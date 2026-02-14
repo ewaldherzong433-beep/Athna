@@ -8,7 +8,8 @@
             "./img/Accessories/1 Bags - 1.700k .webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 2,
@@ -19,7 +20,8 @@
             "./img/Accessories/10 Bags - 999k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 3,
@@ -30,7 +32,8 @@
             "./img/Accessories/11 Bags - 999k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 4,
@@ -41,7 +44,8 @@
             "./img/Accessories/12 Bags - 999k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 5,
@@ -52,7 +56,8 @@
             "./img/Accessories/13 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 6,
@@ -63,7 +68,8 @@
             "./img/Accessories/14 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 7,
@@ -74,7 +80,8 @@
             "./img/Accessories/15 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 8,
@@ -85,7 +92,8 @@
             "./img/Accessories/16 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 9,
@@ -96,7 +104,8 @@
             "./img/Accessories/17 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 10,
@@ -107,7 +116,8 @@
             "./img/Accessories/18 Bags - 2.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 11,
@@ -118,7 +128,8 @@
             "./img/Accessories/19 Bags - 1.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 12,
@@ -129,7 +140,8 @@
             "./img/Accessories/2 Bags  - 1.000k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 13,
@@ -140,7 +152,8 @@
             "./img/Accessories/20 Bags - 1.200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 14,
@@ -151,7 +164,8 @@
             "./img/Accessories/21 Bags - 1.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 15,
@@ -162,7 +176,8 @@
             "./img/Accessories/22 Bags - 2.700k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 16,
@@ -173,7 +188,8 @@
             "./img/Accessories/23 Bags  - 3.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 17,
@@ -184,7 +200,8 @@
             "./img/Accessories/24 Bags  - 2.000k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 18,
@@ -195,7 +212,8 @@
             "./img/Accessories/25 Bags - 2.500k .webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 19,
@@ -206,7 +224,8 @@
             "./img/Accessories/26 Bags -  2.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 20,
@@ -217,7 +236,8 @@
             "./img/Accessories/27 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 21,
@@ -228,7 +248,8 @@
             "./img/Accessories/28 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 22,
@@ -239,7 +260,8 @@
             "./img/Accessories/29 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 23,
@@ -250,7 +272,8 @@
             "./img/Accessories/3 Bags  - 1.000k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 24,
@@ -261,7 +284,8 @@
             "./img/Accessories/30 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 25,
@@ -272,7 +296,8 @@
             "./img/Accessories/31 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 26,
@@ -283,7 +308,8 @@
             "./img/Accessories/32 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 27,
@@ -294,7 +320,8 @@
             "./img/Accessories/33 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 28,
@@ -305,7 +332,8 @@
             "./img/Accessories/34 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 29,
@@ -316,7 +344,8 @@
             "./img/Accessories/35 Hairgrib - 269k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 30,
@@ -327,7 +356,8 @@
             "./img/Accessories/36 Sunglasses - 1.989k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 31,
@@ -338,7 +368,8 @@
             "./img/Accessories/37 Sunglasses - 1.700k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 32,
@@ -349,7 +380,8 @@
             "./img/Accessories/38 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 33,
@@ -360,7 +392,8 @@
             "./img/Accessories/39 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 34,
@@ -371,7 +404,8 @@
             "./img/Accessories/4 Bags  - 1.000k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 35,
@@ -382,7 +416,8 @@
             "./img/Accessories/40 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 36,
@@ -393,7 +428,8 @@
             "./img/Accessories/41 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 37,
@@ -404,7 +440,8 @@
             "./img/Accessories/42 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 38,
@@ -415,7 +452,8 @@
             "./img/Accessories/43 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 39,
@@ -426,7 +464,8 @@
             "./img/Accessories/44 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 40,
@@ -437,7 +476,8 @@
             "./img/Accessories/45 Sunglasses - 3.100k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 41,
@@ -448,7 +488,8 @@
             "./img/Accessories/46 Shock  - 110k_pcs 450k_box .webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 42,
@@ -459,7 +500,8 @@
             "./img/Accessories/47 Shock  - 110k_pcs 450k_box .webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 43,
@@ -470,7 +512,8 @@
             "./img/Accessories/48 Shock  - 110k_pcs 450k_box .webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 44,
@@ -481,7 +524,8 @@
             "./img/Accessories/49 Shock  - 200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 45,
@@ -492,7 +536,8 @@
             "./img/Accessories/5 Bags  - 2.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 46,
@@ -503,7 +548,8 @@
             "./img/Accessories/50 Shock  - 200k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 47,
@@ -514,7 +560,8 @@
             "./img/Accessories/51 Shock  - 369k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 48,
@@ -525,7 +572,8 @@
             "./img/Accessories/52 Shock  - 369k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 49,
@@ -536,7 +584,8 @@
             "./img/Accessories/53 Shock  - 130k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 50,
@@ -547,7 +596,8 @@
             "./img/Accessories/54 Shock  - 130k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 51,
@@ -558,7 +608,8 @@
             "./img/Accessories/55 Shock  - 130k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 52,
@@ -569,7 +620,8 @@
             "./img/Accessories/6 Bags  - 2.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 53,
@@ -580,7 +632,8 @@
             "./img/Accessories/7 Bags  - 2.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 54,
@@ -591,7 +644,8 @@
             "./img/Accessories/8 Bags  - 2.500k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 55,
@@ -602,7 +656,8 @@
             "./img/Accessories/9 Bags - 999k.webp"
         ],
         "category": "Accessories",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 56,
@@ -613,7 +668,8 @@
             "./img/Caps & Hats/1 Caps - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 57,
@@ -624,7 +680,8 @@
             "./img/Caps & Hats/10 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 58,
@@ -635,7 +692,8 @@
             "./img/Caps & Hats/11 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 59,
@@ -646,7 +704,8 @@
             "./img/Caps & Hats/12 Visor  - 400k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 60,
@@ -657,7 +716,8 @@
             "./img/Caps & Hats/13 Visor  - 400k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 61,
@@ -668,7 +728,8 @@
             "./img/Caps & Hats/14 Visor  - 400k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 62,
@@ -679,7 +740,8 @@
             "./img/Caps & Hats/15 Visor  - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 63,
@@ -690,7 +752,8 @@
             "./img/Caps & Hats/16 Visor  - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 64,
@@ -701,7 +764,8 @@
             "./img/Caps & Hats/17 Visor  - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 65,
@@ -712,7 +776,8 @@
             "./img/Caps & Hats/18 Hats  - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 66,
@@ -723,7 +788,8 @@
             "./img/Caps & Hats/19 Hats - 900k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 67,
@@ -734,7 +800,8 @@
             "./img/Caps & Hats/2 Caps - 550k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 68,
@@ -745,7 +812,8 @@
             "./img/Caps & Hats/20 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 69,
@@ -756,7 +824,8 @@
             "./img/Caps & Hats/21 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 70,
@@ -767,7 +836,8 @@
             "./img/Caps & Hats/22 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 71,
@@ -778,7 +848,8 @@
             "./img/Caps & Hats/23 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 72,
@@ -789,7 +860,8 @@
             "./img/Caps & Hats/24 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 73,
@@ -800,7 +872,8 @@
             "./img/Caps & Hats/25 Hats  - 999k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 74,
@@ -811,7 +884,8 @@
             "./img/Caps & Hats/26 Hats  - 1.100k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 75,
@@ -822,7 +896,8 @@
             "./img/Caps & Hats/27 Hats  - 999k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 76,
@@ -833,7 +908,8 @@
             "./img/Caps & Hats/28 Hats  - 999k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 77,
@@ -844,7 +920,8 @@
             "./img/Caps & Hats/29 Hats - 000k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 78,
@@ -855,7 +932,8 @@
             "./img/Caps & Hats/3 Caps - 400k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 79,
@@ -866,7 +944,8 @@
             "./img/Caps & Hats/30 Hats - 000k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 80,
@@ -877,7 +956,8 @@
             "./img/Caps & Hats/4 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 81,
@@ -888,7 +968,8 @@
             "./img/Caps & Hats/5 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 82,
@@ -899,7 +980,8 @@
             "./img/Caps & Hats/6 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 83,
@@ -910,7 +992,8 @@
             "./img/Caps & Hats/7 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 84,
@@ -921,7 +1004,8 @@
             "./img/Caps & Hats/8 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 85,
@@ -932,7 +1016,8 @@
             "./img/Caps & Hats/9 Caps - 500k.webp"
         ],
         "category": "Caps & Hats",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 86,
@@ -943,7 +1028,13 @@
             "./img/Men Sportswear/1 Top Sport Men - 1.100k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 87,
@@ -954,7 +1045,13 @@
             "./img/Men Sportswear/10 Short Sport Men - 1.000k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 88,
@@ -965,7 +1062,13 @@
             "./img/Men Sportswear/11 Short Sport Men - 1.000k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 89,
@@ -976,7 +1079,13 @@
             "./img/Men Sportswear/12 Short Sport Men - 1.000k .webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 90,
@@ -987,7 +1096,13 @@
             "./img/Men Sportswear/13 Short Sport Men - 799k .webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 91,
@@ -998,7 +1113,13 @@
             "./img/Men Sportswear/14 Short Sport Men - 620k .jpg.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 92,
@@ -1009,7 +1130,13 @@
             "./img/Men Sportswear/15 Short Sport Men - 750k .webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 93,
@@ -1020,7 +1147,13 @@
             "./img/Men Sportswear/2 Top Sport Men - 1.100k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 94,
@@ -1031,7 +1164,13 @@
             "./img/Men Sportswear/3 Top Sport Men - 1.100k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 95,
@@ -1042,7 +1181,13 @@
             "./img/Men Sportswear/4 One Set Sport Men - 728k .webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 96,
@@ -1053,7 +1198,13 @@
             "./img/Men Sportswear/5 T-Shirt Sport Men - 899k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 97,
@@ -1064,7 +1215,13 @@
             "./img/Men Sportswear/6 T-Shirt Sport Men - 899k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 98,
@@ -1075,7 +1232,13 @@
             "./img/Men Sportswear/7 T-Shirt Sport Men - 899k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 99,
@@ -1086,7 +1249,13 @@
             "./img/Men Sportswear/8 T-Shirt Sport Men - 988k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 100,
@@ -1097,7 +1266,13 @@
             "./img/Men Sportswear/9 Short Sport Men - 1.000k.webp"
         ],
         "category": "Men Sportswear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 101,
@@ -1108,7 +1283,10 @@
             "./img/Women casualwear/1 Top Casual Women - 825k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 102,
@@ -1119,7 +1297,11 @@
             "./img/Women casualwear/10 T-Shirt Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 103,
@@ -1130,7 +1312,11 @@
             "./img/Women casualwear/11 T-Shirt Casual Women - 1.000k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 104,
@@ -1141,7 +1327,11 @@
             "./img/Women casualwear/12 One Set Casual Women - 2.099k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 105,
@@ -1152,7 +1342,11 @@
             "./img/Women casualwear/13 One Set Casual Women - 2.099k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 106,
@@ -1163,7 +1357,11 @@
             "./img/Women casualwear/14 One Set Casual Women - 2.099k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 107,
@@ -1174,7 +1372,11 @@
             "./img/Women casualwear/15 One Set Casual Women - 2.099k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 108,
@@ -1185,7 +1387,11 @@
             "./img/Women casualwear/16 One Set Casual Women - 2.099k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M"
+        ]
     },
     {
         "id": 109,
@@ -1196,7 +1402,10 @@
             "./img/Women casualwear/2 Top Casual Women - 825k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 110,
@@ -1207,7 +1416,10 @@
             "./img/Women casualwear/3 Top Casual Women - 825k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 111,
@@ -1218,7 +1430,10 @@
             "./img/Women casualwear/4 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 112,
@@ -1229,7 +1444,10 @@
             "./img/Women casualwear/5 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 113,
@@ -1240,7 +1458,10 @@
             "./img/Women casualwear/6 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 114,
@@ -1251,7 +1472,10 @@
             "./img/Women casualwear/7 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 115,
@@ -1262,7 +1486,10 @@
             "./img/Women casualwear/8 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 116,
@@ -1273,7 +1500,10 @@
             "./img/Women casualwear/9 Top Casual Women - 1.045k.webp"
         ],
         "category": "Women casualwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "All size"
+        ]
     },
     {
         "id": 117,
@@ -1284,7 +1514,12 @@
             "./img/Women sportwear/1 Top Sport Women - 750k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 118,
@@ -1295,7 +1530,12 @@
             "./img/Women sportwear/10 Tanktop Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 119,
@@ -1306,7 +1546,12 @@
             "./img/Women sportwear/100 Short Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 120,
@@ -1317,7 +1562,12 @@
             "./img/Women sportwear/101 Short Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 121,
@@ -1328,7 +1578,13 @@
             "./img/Women sportwear/102 Skirt Sport Women - 800k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 122,
@@ -1339,7 +1595,13 @@
             "./img/Women sportwear/103 Skirt Sport Women - 800k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 123,
@@ -1350,7 +1612,13 @@
             "./img/Women sportwear/104 Skirt Sport Women - 800k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 124,
@@ -1361,7 +1629,13 @@
             "./img/Women sportwear/105 Skirt Sport Women - 689k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 125,
@@ -1372,7 +1646,13 @@
             "./img/Women sportwear/106 Skirt Sport Women - 689k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 126,
@@ -1383,7 +1663,13 @@
             "./img/Women sportwear/107 Skirt Sport Women - 689k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 127,
@@ -1394,7 +1680,13 @@
             "./img/Women sportwear/108 Skirt Sport Women - 689k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 128,
@@ -1405,7 +1697,12 @@
             "./img/Women sportwear/109 Skirt Sport Women - 770k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 129,
@@ -1416,7 +1713,12 @@
             "./img/Women sportwear/11 Top Sport Women - 760k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 130,
@@ -1427,7 +1729,10 @@
             "./img/Women sportwear/110 Skirt Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S"
+        ]
     },
     {
         "id": 131,
@@ -1438,7 +1743,12 @@
             "./img/Women sportwear/111 Longpants Sport Women - 1.999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 132,
@@ -1449,7 +1759,12 @@
             "./img/Women sportwear/112 Longpants Sport Women - 900k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 133,
@@ -1460,7 +1775,13 @@
             "./img/Women sportwear/113 Longpants Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 134,
@@ -1471,7 +1792,13 @@
             "./img/Women sportwear/114 Longpants Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L",
+            "XL"
+        ]
     },
     {
         "id": 135,
@@ -1482,7 +1809,12 @@
             "./img/Women sportwear/115 Longpants Sport Women - 900k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 136,
@@ -1493,7 +1825,12 @@
             "./img/Women sportwear/116 Longpants Sport Women - 900k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 137,
@@ -1504,7 +1841,12 @@
             "./img/Women sportwear/117 Longpants Sport Women - 700k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 138,
@@ -1515,7 +1857,12 @@
             "./img/Women sportwear/12 Top Sport Women - 760k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 139,
@@ -1526,7 +1873,12 @@
             "./img/Women sportwear/13 Top Sport Women - 760k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 140,
@@ -1537,7 +1889,12 @@
             "./img/Women sportwear/14 Top Sport Women - 760k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 141,
@@ -1548,7 +1905,12 @@
             "./img/Women sportwear/15 Top Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 142,
@@ -1559,7 +1921,12 @@
             "./img/Women sportwear/16 Top Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 143,
@@ -1570,7 +1937,12 @@
             "./img/Women sportwear/17 Top Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 144,
@@ -1581,7 +1953,12 @@
             "./img/Women sportwear/18 Top Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 145,
@@ -1592,7 +1969,12 @@
             "./img/Women sportwear/19 Top Sport Women - 770k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 146,
@@ -1603,7 +1985,12 @@
             "./img/Women sportwear/2 Top Sport Women - 750k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 147,
@@ -1614,7 +2001,12 @@
             "./img/Women sportwear/20 Top Sport Women - 770k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 148,
@@ -1625,7 +2017,12 @@
             "./img/Women sportwear/21 T-Shirt Sport Women - 800k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 149,
@@ -1636,7 +2033,12 @@
             "./img/Women sportwear/22 T-Shirt Sport Women - 800k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 150,
@@ -1647,7 +2049,12 @@
             "./img/Women sportwear/23 Sport Jacket Women - 850k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 151,
@@ -1658,7 +2065,12 @@
             "./img/Women sportwear/24 Sport Jacket Women - 850k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 152,
@@ -1666,21 +2078,16 @@
         "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
         "price": 1700000.0,
         "images": [
-            "./img/Women sportwear/25 One Set Jacket Women - 1.700k.webp"
-        ],
-        "category": "Women Sportwear",
-        "discount": 0
-    },
-    {
-        "id": 153,
-        "name": "One Set Jacket Women",
-        "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
-        "price": 1700000.0,
-        "images": [
+            "./img/Women sportwear/25 One Set Jacket Women - 1.700k.webp",
             "./img/Women sportwear/26 One Set Jacket Women - 1.700k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 154,
@@ -1688,21 +2095,12 @@
         "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
         "price": 2999000.0,
         "images": [
-            "./img/Women sportwear/27 One Set Jacket Women - 2.999k.webp"
-        ],
-        "category": "Women Sportwear",
-        "discount": 0
-    },
-    {
-        "id": 155,
-        "name": "One Set Jacket Women",
-        "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
-        "price": 2999000.0,
-        "images": [
+            "./img/Women sportwear/27 One Set Jacket Women - 2.999k.webp",
             "./img/Women sportwear/28 One Set Jacket Women - 2.999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 156,
@@ -1710,10 +2108,12 @@
         "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
         "price": 2999000.0,
         "images": [
-            "./img/Women sportwear/29 One Set Jacket Women - 2.999k.webp"
+            "./img/Women sportwear/29 One Set Jacket Women - 2.999k.webp",
+            "./img/Women sportwear/30 One Set Jacket Women - 2.999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": []
     },
     {
         "id": 157,
@@ -1724,18 +2124,12 @@
             "./img/Women sportwear/3 Top Sport Women - 750k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
-    },
-    {
-        "id": 158,
-        "name": "One Set Jacket Women",
-        "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
-        "price": 2999000.0,
-        "images": [
-            "./img/Women sportwear/30 One Set Jacket Women - 2.999k.webp"
-        ],
-        "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 159,
@@ -1746,7 +2140,12 @@
             "./img/Women sportwear/31 Jumpsuit Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 160,
@@ -1757,7 +2156,12 @@
             "./img/Women sportwear/32 Jumpsuit Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 161,
@@ -1768,7 +2172,12 @@
             "./img/Women sportwear/33 Jumpsuit Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 162,
@@ -1779,7 +2188,12 @@
             "./img/Women sportwear/34 Jumpsuit Sport Women - 980k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 163,
@@ -1790,7 +2204,12 @@
             "./img/Women sportwear/35 Jumpsuit Sport Women - 980k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 164,
@@ -1801,7 +2220,12 @@
             "./img/Women sportwear/36 Jumpsuit Sport Women - 980k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 165,
@@ -1812,7 +2236,12 @@
             "./img/Women sportwear/37 Jumpsuit Sport Women - 980k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 166,
@@ -1823,7 +2252,12 @@
             "./img/Women sportwear/38 Jumpsuit Sport Women - 980k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 167,
@@ -1834,7 +2268,12 @@
             "./img/Women sportwear/39 Jumpsuit Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 168,
@@ -1845,7 +2284,12 @@
             "./img/Women sportwear/4 Top Sport Women - 750k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 169,
@@ -1856,7 +2300,12 @@
             "./img/Women sportwear/40 Jumpsuit Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 170,
@@ -1867,7 +2316,12 @@
             "./img/Women sportwear/41 Jumpsuit Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 171,
@@ -1878,7 +2332,12 @@
             "./img/Women sportwear/42 Jumpsuit Sport Women - 999k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 172,
@@ -1889,7 +2348,12 @@
             "./img/Women sportwear/43 Jumpsuit Sport Women - 1.000k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 173,
@@ -1900,7 +2364,12 @@
             "./img/Women sportwear/44 Jumpsuit Sport Women - 1.000k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 174,
@@ -1911,7 +2380,12 @@
             "./img/Women sportwear/45 Jumpsuit Sport Women - 1.000k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 175,
@@ -1922,7 +2396,12 @@
             "./img/Women sportwear/46 Jumpsuit Sport Women - 1.000k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 176,
@@ -1933,7 +2412,12 @@
             "./img/Women sportwear/47 Jumpsuit Sport Women - 1.000k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 177,
@@ -1944,7 +2428,12 @@
             "./img/Women sportwear/48 Dress Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 178,
@@ -1955,7 +2444,12 @@
             "./img/Women sportwear/49 Dress Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 179,
@@ -1966,7 +2460,12 @@
             "./img/Women sportwear/5 Top Sport Women - 900k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 180,
@@ -1977,7 +2476,12 @@
             "./img/Women sportwear/50 Dress Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 181,
@@ -1988,7 +2492,12 @@
             "./img/Women sportwear/51 Dress Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 182,
@@ -1999,7 +2508,12 @@
             "./img/Women sportwear/52 Dress Sport Women - 1.100k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 183,
@@ -2010,7 +2524,12 @@
             "./img/Women sportwear/53 Dress Sport Women - 1.100k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 184,
@@ -2018,21 +2537,16 @@
         "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
         "price": 1300000.0,
         "images": [
-            "./img/Women sportwear/54 Dress Sport Women - 1.300k.webp"
-        ],
-        "category": "Women Sportwear",
-        "discount": 0
-    },
-    {
-        "id": 185,
-        "name": "Dress Sport Women",
-        "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
-        "price": 1300000.0,
-        "images": [
+            "./img/Women sportwear/54 Dress Sport Women - 1.300k.webp",
             "./img/Women sportwear/55 Dress Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 186,
@@ -2040,21 +2554,16 @@
         "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
         "price": 1300000.0,
         "images": [
-            "./img/Women sportwear/56 Dress Sport Women - 1.300k.webp"
-        ],
-        "category": "Women Sportwear",
-        "discount": 0
-    },
-    {
-        "id": 187,
-        "name": "Dress Sport Women",
-        "description": "If you would like to purchase this product, please take a screenshot and send it to our WhatsApp admin to check product availability",
-        "price": 1300000.0,
-        "images": [
+            "./img/Women sportwear/56 Dress Sport Women - 1.300k.webp",
             "./img/Women sportwear/57 Dress Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 188,
@@ -2065,7 +2574,12 @@
             "./img/Women sportwear/58 Dress Sport Women - 1.488k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 189,
@@ -2076,7 +2590,12 @@
             "./img/Women sportwear/59 Dress Sport Women - 1.520k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 190,
@@ -2087,7 +2606,12 @@
             "./img/Women sportwear/6 Top Sport Women - 869k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 191,
@@ -2098,7 +2622,12 @@
             "./img/Women sportwear/60 One Set Sport Women - 1.270k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 192,
@@ -2109,7 +2638,12 @@
             "./img/Women sportwear/61 One Set Sport Women - 1.499k .webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 193,
@@ -2120,7 +2654,12 @@
             "./img/Women sportwear/62 One Set Sport Women - 1.499k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 194,
@@ -2131,7 +2670,12 @@
             "./img/Women sportwear/63 One Set Sport Women - 1.499k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 195,
@@ -2142,7 +2686,12 @@
             "./img/Women sportwear/64 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 196,
@@ -2153,7 +2702,12 @@
             "./img/Women sportwear/65 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 197,
@@ -2164,7 +2718,12 @@
             "./img/Women sportwear/66 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 198,
@@ -2175,7 +2734,12 @@
             "./img/Women sportwear/67 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 199,
@@ -2186,7 +2750,12 @@
             "./img/Women sportwear/68 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 200,
@@ -2197,7 +2766,12 @@
             "./img/Women sportwear/69 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 201,
@@ -2208,7 +2782,12 @@
             "./img/Women sportwear/7 Top Sport Women - 869k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 202,
@@ -2219,7 +2798,12 @@
             "./img/Women sportwear/70 One Set Sport Women - 1.300k .webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 203,
@@ -2230,7 +2814,12 @@
             "./img/Women sportwear/71 One Set Sport Women - 1.600k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 204,
@@ -2241,7 +2830,12 @@
             "./img/Women sportwear/72 One Set Sport Women - 1.400k .webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 205,
@@ -2252,7 +2846,12 @@
             "./img/Women sportwear/73 One Set Sport Women - 1.400k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 206,
@@ -2263,7 +2862,12 @@
             "./img/Women sportwear/74 One Set Sport Women - 1.400k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 207,
@@ -2274,7 +2878,12 @@
             "./img/Women sportwear/75 One Set Sport Women - 1.199k .webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 208,
@@ -2285,7 +2894,12 @@
             "./img/Women sportwear/76 One Set Sport Women - 1.199k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 209,
@@ -2296,7 +2910,12 @@
             "./img/Women sportwear/77 One Set Sport Women - 1.400k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 210,
@@ -2307,7 +2926,12 @@
             "./img/Women sportwear/78 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 211,
@@ -2318,7 +2942,12 @@
             "./img/Women sportwear/79 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 212,
@@ -2329,7 +2958,12 @@
             "./img/Women sportwear/8 Top Sport Women - 869k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 213,
@@ -2340,7 +2974,12 @@
             "./img/Women sportwear/80 One Set Sport Women - 1.299k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 214,
@@ -2351,7 +2990,12 @@
             "./img/Women sportwear/81 One Set Sport Women - 1.299k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 215,
@@ -2362,7 +3006,12 @@
             "./img/Women sportwear/82 One Set Sport Women - 1.400k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 216,
@@ -2373,7 +3022,12 @@
             "./img/Women sportwear/83 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 217,
@@ -2384,7 +3038,12 @@
             "./img/Women sportwear/84 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 218,
@@ -2395,7 +3054,12 @@
             "./img/Women sportwear/85 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 219,
@@ -2406,7 +3070,10 @@
             "./img/Women sportwear/86 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "L"
+        ]
     },
     {
         "id": 220,
@@ -2417,7 +3084,10 @@
             "./img/Women sportwear/87 One Set Sport Women - 1.300k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "L"
+        ]
     },
     {
         "id": 221,
@@ -2428,7 +3098,12 @@
             "./img/Women sportwear/88 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 222,
@@ -2439,7 +3114,12 @@
             "./img/Women sportwear/89 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 223,
@@ -2450,7 +3130,12 @@
             "./img/Women sportwear/9 Tanktop Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 224,
@@ -2461,7 +3146,12 @@
             "./img/Women sportwear/90 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 225,
@@ -2472,7 +3162,12 @@
             "./img/Women sportwear/91 One Set Sport Women - 1.200k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 226,
@@ -2483,7 +3178,12 @@
             "./img/Women sportwear/92 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 227,
@@ -2494,7 +3194,12 @@
             "./img/Women sportwear/93 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 228,
@@ -2505,7 +3210,12 @@
             "./img/Women sportwear/94 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 229,
@@ -2516,7 +3226,12 @@
             "./img/Women sportwear/95 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 230,
@@ -2527,7 +3242,12 @@
             "./img/Women sportwear/96 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 231,
@@ -2538,7 +3258,12 @@
             "./img/Women sportwear/97 Short Sport Women - 780k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 232,
@@ -2549,7 +3274,12 @@
             "./img/Women sportwear/98 Short Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     },
     {
         "id": 233,
@@ -2560,6 +3290,11 @@
             "./img/Women sportwear/99 Short Sport Women - 660k.webp"
         ],
         "category": "Women Sportwear",
-        "discount": 0
+        "discount": 0,
+        "size": [
+            "S",
+            "M",
+            "L"
+        ]
     }
 ]

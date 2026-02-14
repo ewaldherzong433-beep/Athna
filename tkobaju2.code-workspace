@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"chat.tools.terminal.autoApprove": {
+			"/^\\(Get-Content \"e:\\\\khov\\\\tokoBaju\\\\products\\.json\"\\) -replace '\"category\": \"Men\"', '\"category\": \"man\"' \\| Set-Content \"e:\\\\khov\\\\tokoBaju\\\\products\\.json\"$/": {
+				"approve": true,
+				"matchCommandLine": true
+			}
+		},
+		"github.copilot.enable": {
+			"*": false,
+			"plaintext": false,
+			"markdown": false,
+			"scminput": false,
+			"html": false
+		},
+		"liveServer.settings.multiRootWorkspaceName": "psunes"
+	}
+}

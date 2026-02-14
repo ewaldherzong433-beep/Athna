@@ -1,4 +1,4 @@
-// Simplified ProductPopup class
+// Simplified ProductPopup class - UPDATED to match shop.js popup style
 class ProductPopup {
     constructor() {
         this.products = [];
@@ -26,16 +26,57 @@ class ProductPopup {
             const data = await response.json();
             this.products = data.map(item => {
                 const images = item.images || [item.image];
+                const sizes = item.size || []; // Handle size array
+                
                 return {
                     id: item.id,
                     name: item.name,
-                    price: item.price,
+                    price: item.discount > 0 ? Math.round(item.price * (1 - item.discount / 100)) : item.price,
                     originalPrice: item.price,
                     discount: item.discount || 0,
                     description: item.description,
                     category: item.category,
                     images: images,
-                    currentImageIndex: 0
+                    size: sizes, // Add size property
+                    currentImageIndex: 0,
+                    
+                    // Add methods to match shop.js Product class
+                    hasDiscount() {
+                        return this.discount > 0;
+                    },
+                    
+                    calculateDiscountedPrice() {
+                        if (this.hasDiscount()) {
+                            return Math.round(this.originalPrice * (1 - this.discount / 100));
+                        }
+                        return this.price;
+                    },
+                    
+                    hasMultipleImages() {
+                        return this.images.length > 1;
+                    },
+                    
+                    hasSizes() {
+                        return this.size && this.size.length > 0;
+                    },
+                    
+                    nextImage() {
+                        if (this.hasMultipleImages()) {
+                            this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
+                        }
+                        return this.images[this.currentImageIndex];
+                    },
+                    
+                    previousImage() {
+                        if (this.hasMultipleImages()) {
+                            this.currentImageIndex = (this.currentImageIndex - 1 + this.images.length) % this.images.length;
+                        }
+                        return this.images[this.currentImageIndex];
+                    },
+                    
+                    formatPrice(price) {
+                        return 'Rp ' + price.toLocaleString('id-ID');
+                    }
                 };
             });
             return true;
@@ -49,22 +90,16 @@ class ProductPopup {
         return 'Rp ' + price.toLocaleString('id-ID');
     }
 
-    calculateDiscountedPrice(product) {
-        if (product.discount > 0) {
-            return Math.round(product.originalPrice * (1 - product.discount / 100));
-        }
-        return product.price;
-    }
-
+    // Updated to include size display with thin borders
     getProductHTML(product) {
-        const hasDiscount = product.discount > 0;
-        const discountedPrice = this.calculateDiscountedPrice(product);
-        const hasMultipleImages = product.images.length > 1;
+        const hasDiscount = product.hasDiscount();
+        const discountedPrice = product.calculateDiscountedPrice();
+        const hasMultipleImages = product.hasMultipleImages();
+        const hasSizes = product.hasSizes();
 
         return `
-            <div class="product-popup active" data-id="${product.id}">
-                <div class="popup-overlay"></div>
-                <div class="popup-content">
+            <div class="product-popup" data-id="${product.id}">
+                <div class="popup-content horizontal-layout">
                     <button class="close-popup">&times;</button>
                     
                     <div class="popup-images">
@@ -90,9 +125,9 @@ class ProductPopup {
                     </div>
                     
                     <div class="popup-details">
-                        <div class="category-badge">${product.category}</div>
+
                         <h2 class="popup-title">${product.name}</h2>
-                        
+                        <div class="category-badge">${product.category}</div>
                         <div class="popup-price">
                             ${hasDiscount ?
                 `<span class="original-price">${this.formatPrice(product.originalPrice)}</span>
@@ -101,6 +136,14 @@ class ProductPopup {
                 : `<span class="current-price">${this.formatPrice(product.price)}</span>`
             }
                         </div>
+                        <div class="popup-sizes">
+                            <h3>Available Sizes</h3>
+                        ${hasSizes ? `
+                            <div class="size-options">
+                                ${product.size.map(s => `<span class="size-tag">${s}</span>`).join('')}
+                            </div>
+                        </div>
+                        ` : `<span class="size-tag placeholder hidden">&nbsp;</span>`}
                         
                         <div class="popup-description">
                             <h3>Description</h3>
@@ -132,9 +175,15 @@ class ProductPopup {
 
         // Create and show new popup
         this.popupContainer.innerHTML = this.getProductHTML(product);
+        const popup = this.popupContainer.querySelector('.product-popup');
 
         // Prevent body scroll
         document.body.classList.add('popup-open');
+
+        // Show popup with animation (matching shop.js)
+        requestAnimationFrame(() => {
+            popup.classList.add('active');
+        });
 
         // Add popup event listeners
         this.addPopupEventListeners(product);
@@ -169,14 +218,12 @@ class ProductPopup {
             });
         }
 
-        // Close popup when clicking outside
-        const overlay = popup.querySelector('.popup-overlay');
-        if (overlay) {
-            overlay.addEventListener('click', (e) => {
-                e.stopPropagation();
+        // Close popup when clicking outside (matching shop.js)
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
                 this.closePopup();
-            });
-        }
+            }
+        });
 
         // Close popup with Escape key
         const escapeHandler = (e) => {
@@ -187,8 +234,8 @@ class ProductPopup {
         };
         document.addEventListener('keydown', escapeHandler);
 
-        // Image navigation
-        if (product.images.length > 1) {
+        // Image navigation - matching shop.js
+        if (product.hasMultipleImages()) {
             const mainImage = popup.querySelector(`#main-image-${product.id}`);
             const thumbnails = popup.querySelectorAll('.thumbnail');
             const prevBtn = popup.querySelector('.prev-btn');
@@ -214,7 +261,7 @@ class ProductPopup {
             if (prevBtn) {
                 prevBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    product.currentImageIndex = (product.currentImageIndex - 1 + product.images.length) % product.images.length;
+                    product.previousImage();
                     if (mainImage) mainImage.src = product.images[product.currentImageIndex];
 
                     // Update active thumbnail
@@ -229,7 +276,7 @@ class ProductPopup {
             if (nextBtn) {
                 nextBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    product.currentImageIndex = (product.currentImageIndex + 1) % product.images.length;
+                    product.nextImage();
                     if (mainImage) mainImage.src = product.images[product.currentImageIndex];
 
                     // Update active thumbnail
@@ -251,6 +298,12 @@ class ProductPopup {
         
         if (productId) {
             this.showProductPopup(productId);
+        }
+        
+        // Check for pending product popup
+        if (window._pendingProductPopup) {
+            this.showProductPopup(window._pendingProductPopup);
+            window._pendingProductPopup = null;
         }
         
         // Make showPopup available globally

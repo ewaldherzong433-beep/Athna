@@ -1,6 +1,6 @@
 // Product class to create shop items
 class Product {
-    constructor(id, name, price, description, category, images, originalPrice = null, discount = 0) {
+    constructor(id, name, price, description, category, images, originalPrice = null, discount = 0, size = []) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -11,6 +11,7 @@ class Product {
         this.originalPrice = originalPrice || price;
         this.discount = discount;
         this.currentImageIndex = 0;
+        this.size = Array.isArray(size) ? size : []; // Handle size array
     }
 
     formatPrice(price) {
@@ -30,6 +31,12 @@ class Product {
 
     hasMultipleImages() {
         return this.images.length > 1;
+    }
+
+    hasSizes() {
+        // Treat an (empty) size array as valid so the popup layout remains consistent.
+        // The popup will render a placeholder when there are no actual sizes.
+        return Array.isArray(this.size);
     }
 
     nextImage() {
@@ -75,51 +82,63 @@ class Product {
         const hasDiscount = this.hasDiscount();
         const discountedPrice = this.calculateDiscountedPrice();
         const hasMultipleImages = this.hasMultipleImages();
+        const hasSizes = this.hasSizes();
 
         return `
             <div class="product-popup" data-id="${this.id}">
-                <div class="popup-content">
-                    <button class="close-popup">&times;</button>
-                    
-                    <div class="popup-images">
-                        <div class="main-image-container">
-                            <img src="${this.images[0]}" alt="${this.name}" class="main-image" id="main-image-${this.id}">
-                            
-                            ${hasMultipleImages ? `
-                                <button class="image-nav-btn prev-btn">‹</button>
-                                <button class="image-nav-btn next-btn">›</button>
-                            ` : ''}
-                        </div>
-                    </div>
-                    
-                    <div class="popup-details">
-                        <div class="category-badge">${this.category}</div>
-                        <h2 class="popup-title">${this.name}</h2>
-                        
-                        <div class="popup-price">
-                            ${hasDiscount ?
-                `<span class="original-price">${this.formatPrice(this.originalPrice)}</span>
-                                 <span class="discounted-price">${this.formatPrice(discountedPrice)}</span>
-                                 <span class="discount-percent">-${this.discount}%</span>`
-                : `<span class="current-price">${this.formatPrice(this.price)}</span>`
-            }
-                        </div>
-                        
-                        <div class="popup-description">
-                            <h3>Description</h3>
-                            <p>${this.description}</p>
-                        </div>
-                        
-                        <div class="popup-actions">
-                            <a href="https://wa.me/6287864853508?text=Hi, I want to order: ${encodeURIComponent(this.name)} (ID: ${this.id}) - Price: ${this.formatPrice(this.calculateDiscountedPrice())}" 
-                               target="_blank" 
-                               class="whatsapp-order-btn">
-                                <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
-                            </a>
-                        </div>
-                    </div>
+    <div class="popup-content horizontal-layout">
+        <button class="close-popup">&times;</button>
+        
+        <div class="popup-images">
+            <div class="main-image-container">
+                <img src="${this.images[0]}" alt="${this.name}" class="main-image" id="main-image-${this.id}">
+                
+                ${hasMultipleImages ? `
+                    <button class="image-nav-btn prev-btn">‹</button>
+                    <button class="image-nav-btn next-btn">›</button>
+                ` : ''}
+            </div>
+        </div>
+        
+        <div class="popup-details">            
+            <h2 class="popup-title">${this.name}</h2>
+            <div class="category-badge">${this.category}</div>
+            
+            <div class="popup-price">
+                ${hasDiscount ?
+                    `<span class="original-price">${this.formatPrice(this.originalPrice)}</span>
+                     <span class="discounted-price">${this.formatPrice(discountedPrice)}</span>
+                     <span class="discount-percent">-${this.discount}%</span>`
+                    : `<span class="current-price">${this.formatPrice(this.price)}</span>`
+                }
+            </div>
+            
+            ${hasSizes ? `
+            <div class="popup-sizes">
+                <h3>Available Sizes</h3>
+                <div class="size-options">
+                    ${Array.isArray(this.size) && this.size.length > 0
+                        ? this.size.map(s => `<span class="size-tag">${s}</span>`).join('')
+                        : `<span class="size-tag placeholder hidden">&nbsp;</span>`}
                 </div>
             </div>
+            ` : ` ` }
+            
+            <div class="popup-description">
+                <h3>Description</h3>
+                <p>${this.description}</p>
+            </div>
+            
+            <div class="popup-actions">
+                <a href="https://wa.me/6287864853508?text=Hi, I want to order: ${encodeURIComponent(this.name)} (ID: ${this.id}) - Price: ${this.formatPrice(this.calculateDiscountedPrice())}" 
+                   target="_blank" 
+                   class="whatsapp-order-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
         `;
     }
 }
@@ -132,11 +151,11 @@ class ShopApp {
         this.filterContainer = document.getElementById('category-filter-container');
         this.pageTitle = document.getElementById('page-title');
         this.popupContainer = document.getElementById('popup-container');
-        this.paginationContainer = document.getElementById('pagination-container'); // Add this line
+        this.paginationContainer = document.getElementById('pagination-container');
 
         // Pagination properties
         this.currentPage = 1;
-        this.productsPerPage = 24; // Adjust as needed
+        this.productsPerPage = 24;
         this.totalPages = 1;
 
         // Create popup container if it doesn't exist
@@ -157,9 +176,7 @@ class ShopApp {
 
         // Check URL parameters for category and page
         const urlParams = new URLSearchParams(window.location.search);
-        // Set default to first category
         this.currentCategory = urlParams.get('category') || this.fixedCategories[0];
-        // Get page from URL or default to 1
         this.currentPage = parseInt(urlParams.get('page')) || 1;
 
         this.init();
@@ -180,6 +197,9 @@ class ShopApp {
 
                 // Handle both old format (single image) and new format (multiple images)
                 const images = item.images || [item.image];
+                
+                // Handle size array - ensure it's always an array
+                const sizes = item.size || [];
 
                 return new Product(
                     item.id,
@@ -187,11 +207,12 @@ class ShopApp {
                     item.discount > 0 ? Math.round(item.price * (1 - item.discount / 100)) : item.price,
                     item.description,
                     item.category,
-                    images, // Pass array of images
-                    item.price, // Original price
-                    item.discount || 0 // Discount percentage
+                    images,
+                    item.price,
+                    item.discount || 0,
+                    sizes // Pass size array
                 );
-            }).filter(product => product !== null); // Remove null products
+            }).filter(product => product !== null);
 
             // Verify all products have valid categories
             const invalidCategories = this.products
@@ -210,7 +231,6 @@ class ShopApp {
                 this.currentCategory = this.categories[0];
             }
 
-            //this.createCategoryFilter();
             return true;
         } catch (error) {
             console.error('Error loading products:', error);
@@ -218,8 +238,6 @@ class ShopApp {
             return false;
         }
     }
-
-
 
     updateURL() {
         const url = new URL(window.location);
@@ -240,30 +258,27 @@ class ShopApp {
         }
     }
 
-    // NEW METHOD: Update navigation links based on current category
     updateNavigationLinks() {
         const prevBtn = document.getElementById('prev-category');
         const nextBtn = document.getElementById('next-category');
 
         if (prevBtn) {
-            // Check if current category is "Man Casual"
             if (this.currentCategory === 'Man Casual') {
                 prevBtn.textContent = 'Home';
                 prevBtn.href = 'index.html';
             } else {
                 prevBtn.textContent = 'Back';
-                prevBtn.href = '#'; // Reset to default
+                prevBtn.href = '#';
             }
         }
 
         if (nextBtn) {
-            // Check if current category is "Woman Accessories"
             if (this.currentCategory === 'Woman Accessories') {
                 nextBtn.textContent = 'Home';
                 nextBtn.href = 'index.html';
             } else {
                 nextBtn.textContent = 'Next Collection';
-                nextBtn.href = '#'; // Reset to default
+                nextBtn.href = '#';
             }
         }
     }
@@ -274,15 +289,13 @@ class ShopApp {
         const currentIndex = this.categories.indexOf(this.currentCategory);
         let prevIndex = currentIndex - 1;
 
-        // If we're at the first category (Man Casual), go to index.html
         if (currentIndex === 0) {
             window.location.href = 'index.html';
             return;
         }
 
-        // If we're not at the first category, go to previous category
         this.currentCategory = this.categories[prevIndex];
-        this.currentPage = 1; // Reset to page 1 when changing category
+        this.currentPage = 1;
         this.updateCategoryNavigation();
     }
 
@@ -292,37 +305,28 @@ class ShopApp {
         const currentIndex = this.categories.indexOf(this.currentCategory);
         let nextIndex = currentIndex + 1;
 
-        // If we're at the last category (Woman Accessories), go to index.html
         if (currentIndex === this.categories.length - 1) {
             window.location.href = 'index.html';
             return;
         }
 
-        // If we're not at the last category, go to next category
         this.currentCategory = this.categories[nextIndex];
-        this.currentPage = 1; // Reset to page 1 when changing category
+        this.currentPage = 1;
         this.updateCategoryNavigation();
     }
 
     updateCategoryNavigation() {
-        // Update the select dropdown
         if (document.getElementById('category-select')) {
             document.getElementById('category-select').value = this.currentCategory;
         }
 
-        // Update URL
         this.updateURL();
-
-        // Update navigation links
         this.updateNavigationLinks();
-
         this.displayProducts();
         this.updatePageTitle();
     }
 
-    // Add this method to set up the navigation event listeners
     setupNavigationListeners() {
-        // Previous category button
         const prevBtn = document.getElementById('prev-category');
         if (prevBtn) {
             prevBtn.addEventListener('click', (e) => {
@@ -331,7 +335,6 @@ class ShopApp {
             });
         }
 
-        // Next category button
         const nextBtn = document.getElementById('next-category');
         if (nextBtn) {
             nextBtn.addEventListener('click', (e) => {
@@ -340,14 +343,11 @@ class ShopApp {
             });
         }
 
-        // Also support keyboard navigation
         document.addEventListener('keydown', (e) => {
-            // Left arrow for previous category
             if (e.key === 'ArrowLeft') {
                 e.preventDefault();
                 this.goToPreviousCategory();
             }
-            // Right arrow for next category
             else if (e.key === 'ArrowRight') {
                 e.preventDefault();
                 this.goToNextCategory();
@@ -356,7 +356,6 @@ class ShopApp {
     }
 
     displayProducts() {
-        // Filter by current category
         const filteredProducts = this.products.filter(product => product.category === this.currentCategory);
 
         if (filteredProducts.length === 0) {
@@ -366,17 +365,14 @@ class ShopApp {
                 <p class="category-hint">Select another category from the dropdown above</p>
             </div>
         `;
-            // Clear pagination
             if (this.paginationContainer) {
                 this.paginationContainer.innerHTML = '';
             }
             return;
         }
 
-        // Calculate pagination
         this.totalPages = Math.ceil(filteredProducts.length / this.productsPerPage);
 
-        // Ensure current page is valid
         if (this.currentPage > this.totalPages) {
             this.currentPage = this.totalPages;
         }
@@ -388,14 +384,11 @@ class ShopApp {
         const endIndex = startIndex + this.productsPerPage;
         const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
-        // Clear only product container (not pagination)
         this.container.innerHTML = paginatedProducts
             .map(product => product.createHTML())
             .join('');
 
-        // Add pagination controls to separate container
         this.addPaginationControls(filteredProducts.length);
-
         this.addEventListeners();
         this.addImageHoverEffects();
     }
@@ -428,24 +421,20 @@ class ShopApp {
         </div>
     `;
 
-        // Insert into the existing pagination container
         if (this.paginationContainer) {
             this.paginationContainer.innerHTML = paginationHTML;
         } else {
-            // Fallback: insert at the end of shop container
             this.container.insertAdjacentHTML('beforeend', paginationHTML);
         }
 
-        // Add event listeners for pagination
         this.addPaginationEventListeners();
     }
 
     generatePageNumbers() {
         let pagesHTML = '';
-        const maxVisiblePages = 5; // Show maximum 5 page numbers
+        const maxVisiblePages = 5;
 
         if (this.totalPages <= maxVisiblePages) {
-            // Show all pages
             for (let i = 1; i <= this.totalPages; i++) {
                 pagesHTML += `
                     <button class="page-number ${i === this.currentPage ? 'active' : ''}" 
@@ -453,9 +442,7 @@ class ShopApp {
                 `;
             }
         } else {
-            // Show with ellipsis
             if (this.currentPage <= 3) {
-                // Show first 4 pages and last page
                 for (let i = 1; i <= 4; i++) {
                     pagesHTML += `
                         <button class="page-number ${i === this.currentPage ? 'active' : ''}" 
@@ -467,7 +454,6 @@ class ShopApp {
                     <button class="page-number" data-page="${this.totalPages}">${this.totalPages}</button>
                 `;
             } else if (this.currentPage >= this.totalPages - 2) {
-                // Show first page and last 4 pages
                 pagesHTML += `
                     <button class="page-number" data-page="1">1</button>
                     <span class="ellipsis">...</span>
@@ -479,7 +465,6 @@ class ShopApp {
                     `;
                 }
             } else {
-                // Show first, last, and current with neighbors
                 pagesHTML += `
                     <button class="page-number" data-page="1">1</button>
                     <span class="ellipsis">...</span>
@@ -496,7 +481,6 @@ class ShopApp {
     }
 
     addPaginationEventListeners() {
-        // Previous page
         const prevBtn = document.getElementById('prev-page');
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
@@ -509,7 +493,6 @@ class ShopApp {
             });
         }
 
-        // Next page
         const nextBtn = document.getElementById('next-page');
         if (nextBtn) {
             nextBtn.addEventListener('click', () => {
@@ -522,7 +505,6 @@ class ShopApp {
             });
         }
 
-        // Page numbers
         const pageNumbers = document.querySelectorAll('.page-number');
         pageNumbers.forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -545,7 +527,6 @@ class ShopApp {
     }
 
     addImageHoverEffects() {
-        // Add hover effect only to product cards that have hover images
         const productCards = this.container.querySelectorAll('.product-card');
 
         productCards.forEach(card => {
@@ -570,22 +551,17 @@ class ShopApp {
         const product = this.products.find(p => p.id === productId);
         if (!product) return;
 
-        // Close any existing popup
         this.closePopup();
 
-        // Create and show new popup
         this.popupContainer.innerHTML = product.createPopupHTML();
         const popup = this.popupContainer.querySelector('.product-popup');
 
-        // Prevent body scroll
         document.body.classList.add('popup-open');
 
-        // Show popup with animation
         requestAnimationFrame(() => {
             popup.classList.add('active');
         });
 
-        // Add popup event listeners
         this.addPopupEventListeners(product);
     }
 
@@ -595,7 +571,6 @@ class ShopApp {
             popup.classList.remove('active');
             document.body.classList.remove('popup-open');
 
-            // Remove from DOM after animation
             setTimeout(() => {
                 if (popup.classList.contains('active') === false) {
                     this.popupContainer.innerHTML = '';
@@ -605,7 +580,6 @@ class ShopApp {
     }
 
     addEventListeners() {
-        // Clickable product cards - use event delegation
         this.container.addEventListener('click', (e) => {
             const productCard = e.target.closest('.clickable-product');
             if (productCard && !e.target.closest('a, button')) {
@@ -619,7 +593,6 @@ class ShopApp {
         const popup = this.popupContainer.querySelector('.product-popup');
         if (!popup) return;
 
-        // Close popup button
         const closeBtn = popup.querySelector('.close-popup');
         if (closeBtn) {
             closeBtn.addEventListener('click', (e) => {
@@ -628,14 +601,12 @@ class ShopApp {
             });
         }
 
-        // Close popup when clicking outside
         popup.addEventListener('click', (e) => {
             if (e.target === popup) {
                 this.closePopup();
             }
         });
 
-        // Close popup with Escape key
         const escapeHandler = (e) => {
             if (e.key === 'Escape') {
                 this.closePopup();
@@ -644,14 +615,12 @@ class ShopApp {
         };
         document.addEventListener('keydown', escapeHandler);
 
-        // Image navigation in popup
         if (product.hasMultipleImages()) {
             const mainImage = popup.querySelector(`#main-image-${product.id}`);
             const thumbnails = popup.querySelectorAll(`.thumbnail[data-id="${product.id}"]`);
             const prevBtn = popup.querySelector('.prev-btn');
             const nextBtn = popup.querySelector('.next-btn');
 
-            // Thumbnail click
             if (thumbnails.length > 0) {
                 thumbnails.forEach(thumb => {
                     thumb.addEventListener('click', (e) => {
@@ -660,21 +629,18 @@ class ShopApp {
                         product.currentImageIndex = index;
                         if (mainImage) mainImage.src = product.images[index];
 
-                        // Update active thumbnail
                         thumbnails.forEach(t => t.classList.remove('active'));
                         e.target.classList.add('active');
                     });
                 });
             }
 
-            // Previous button
             if (prevBtn) {
                 prevBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     product.previousImage();
                     if (mainImage) mainImage.src = product.images[product.currentImageIndex];
 
-                    // Update active thumbnail
                     if (thumbnails.length > 0) {
                         thumbnails.forEach(t => t.classList.remove('active'));
                         thumbnails[product.currentImageIndex].classList.add('active');
@@ -682,14 +648,12 @@ class ShopApp {
                 });
             }
 
-            // Next button
             if (nextBtn) {
                 nextBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     product.nextImage();
                     if (mainImage) mainImage.src = product.images[product.currentImageIndex];
 
-                    // Update active thumbnail
                     if (thumbnails.length > 0) {
                         thumbnails.forEach(t => t.classList.remove('active'));
                         thumbnails[product.currentImageIndex].classList.add('active');
@@ -704,7 +668,7 @@ class ShopApp {
         this.displayProducts();
         this.updatePageTitle();
         this.setupNavigationListeners();
-        this.updateNavigationLinks(); // Call this after initialization
+        this.updateNavigationLinks();
     }
 }
 

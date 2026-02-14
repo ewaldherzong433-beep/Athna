@@ -133,8 +133,10 @@
 
     <!-- About Us Section -->
     <section class="container about-us" id="about-us-section">
+        
         <div class="about-picture">
             <img src="./img/ASSEET/about.webp">
+            <div class="about-tag">Elevate your everyday wear</div>
         </div>
         <div class="about-content" id="about-us">
             <div class="section-title line" id="about-us-title">
@@ -146,9 +148,11 @@
                     personalized care. ATHNA is where comfort meets confidence, and individuality moves with purpose
                     through timeless design and effortless expression.</p>
             </div>
+            
+
         </div>
-        <img src="./img/bgsvg/About us.svg" class="bg-img1">
-        <div class="about-tag">Elevate your everyday wear</div>
+        
+
     </section>
 
 
@@ -214,20 +218,15 @@
 
 
                 </div>
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
 
-                <!-- Pagination dots -->
-                <div class="swiper-pagination"></div>
 
-                <!-- Navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
 
-                <!-- Pagination dots -->
-                <div class="swiper-pagination"></div>
             </div>
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Pagination dots -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -305,7 +304,7 @@
                 <div class="cards-wrapper">
                   ${items.map(item => `
                     <div class="product-card" onclick="safeShowProductPopup(${item.id})" data-id="${item.id}" role="button" tabindex="0">
-                      <div class="card-image"><img src="${item.images && item.images[0] ? item.images[0] : 'https://via.placeholder.com/400x500?text=No+image'}" alt="${item.name}"></div>
+                      <div class="main-image-container"><img class="main-image" src="${item.images && item.images[0] ? item.images[0] : 'https://via.placeholder.com/400x500?text=No+image'}" alt="${item.name}"></div>
                       <div class="card-content">
                         <h3>${item.name}</h3>
                         <p class="price">${fmtPrice(item.price)}</p>
@@ -393,7 +392,7 @@
             </div>
             <div class="contact-container">
                 <div class="section-title section-title-center">
-                    <h2>Visit Our Store</h2>
+                    <h4 class="map-description">Visit Our Store</h4>
                 </div>
                 <div class="contact-maps">
                     <div class="map-item">
