@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css?v=1.0.1">
 </head>
 
 <body>
@@ -68,7 +68,6 @@
             <div class="section-title prods-title">
                 <div class="bg">
                 <h2 id="page-title" class="category-title">All Products</h2>
-                <img src="./img/bgsvg/Background category.svg" class="bg-img2">
                 </div>
                 <a href="index.html" class="btn">Home</a>
             </div>
@@ -227,6 +226,24 @@
             },
         });
     </script>
+
+    <script src="smooth-scroll.js"></script>
+<script>
+    // Optional: Configure smooth scroll for products page
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.SmoothScroll) {
+            window.SmoothScroll.setConfig({
+                offset: 80, // Match your header height
+                duration: 800,
+                easing: 'easeInOutQuad'
+            });
+            
+            window.SmoothScroll.init({
+                preferCSS: true
+            });
+        }
+    });
+</script>
 </body>
 
 </html>

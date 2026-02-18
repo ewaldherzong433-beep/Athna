@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css?v=1.0.1">
 
 </head>
 
@@ -133,7 +133,7 @@
 
     <!-- About Us Section -->
     <section class="container about-us" id="about-us-section">
-       <img src="./img/bgsvg/About us.svg" class="bg-img1"> 
+       
         <div class="about-picture">
             <img src="./img/ASSEET/about2.webp">
             <div class="about-tag">Elevate your everyday wear</div>
@@ -235,7 +235,7 @@
             <div class="category-header">
                 <div class="section-title category-title">
                     <h2>Shop by Category</h2>
-                    <img src="./img/bgsvg/Background category.svg" class="bg-img2">
+                    
                 </div>
                 <div class="category-dropdown">
                     <button class="dropdown-btn">
@@ -434,6 +434,23 @@
     <!-- Footer -->
     <footer>
         <div class="container">
+            <div class="header-container desktop-header">
+                <div class="header-nav">
+                    <a href="./index.html" class="nav-link">Home</a>
+                </div>
+                <div class="header-nav">
+                    <a href="./index.html#about-us-section" class="nav-link">About</a>
+                </div>
+                <div class="header-nav">
+                    <a href="./index.html#highlight" class="nav-link">Highlight</a>
+                </div>
+                <div class="header-nav">
+                    <a href="./index.html#shop" class="nav-link">Category</a>
+                </div>
+                <div class="header-nav">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
             <div class="copyright">
                 <p>Copyright &copy; ATNHA</p>
             </div>
@@ -623,6 +640,27 @@
 
     </script>
     <script src="shop-popup.js"></script>
+    
+    <script src="smooth-scroll.js"></script>
+<script>
+    // Optional: Configure smooth scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.SmoothScroll) {
+            // Customize configuration if needed
+            window.SmoothScroll.setConfig({
+                offset: 80, // Adjust based on your header height
+                duration: 800,
+                easing: 'easeInOutQuad',
+                debug: false // Set to true for debugging
+            });
+            
+            // Re-initialize with custom config
+            window.SmoothScroll.init({
+                preferCSS: true // Try CSS first, fallback to JS
+            });
+        }
+    });
+</script>
 
 </body>
 
