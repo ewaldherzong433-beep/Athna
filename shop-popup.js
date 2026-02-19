@@ -102,32 +102,24 @@ class ProductPopup {
                 <div class="popup-content horizontal-layout">
                     <button class="close-popup">&times;</button>
                     
-                    <div class="popup-images">
-                        <div class="main-image-container">
+                    
+                        
                             <img src="${product.images[0]}" alt="${product.name}" 
-                                 class="main-image" id="main-image-${product.id}">
+                                 class="main-image boxs" id="main-image-${product.id}">
                             
                             ${hasMultipleImages ? `
                                 <button class="image-nav-btn prev-btn">‹</button>
                                 <button class="image-nav-btn next-btn">›</button>
                             ` : ''}
-                        </div>
                         
-                        ${hasMultipleImages ? `
-                            <div class="image-thumbnails">
-                                ${product.images.map((img, index) => `
-                                    <img src="${img}" alt="Thumbnail ${index + 1}" 
-                                         class="thumbnail ${index === 0 ? 'active' : ''}" 
-                                         data-index="${index}">
-                                `).join('')}
-                            </div>
-                        ` : ''}
-                    </div>
+                        
+   
+                    
                     
                     <div class="popup-details">
 
                         <h2 class="popup-title">${product.name}</h2>
-                        <div class="category-badge">${product.category}</div>
+                        
                         <div class="popup-price">
                             ${hasDiscount ?
                 `<span class="original-price">${this.formatPrice(product.originalPrice)}</span>
@@ -137,8 +129,8 @@ class ProductPopup {
             }
                         </div>
                         <div class="popup-sizes">
-                            <h3>Available Sizes</h3>
-                        ${hasSizes ? `
+                            
+                        ${hasSizes ? `<h3>Available Sizes</h3>
                             <div class="size-options">
                                 ${product.size.map(s => `<span class="size-tag">${s}</span>`).join('')}
                             </div>

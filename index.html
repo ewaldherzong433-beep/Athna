@@ -74,66 +74,82 @@
 
 
     <!-- Hero Section with 3 texts and 1 button -->
-    <section class="hero" id="slideshow">
-        <div class="container squish-container">
+    <section class="hero" id="slideshow" aria-label="Homepage slideshow">
+        <div class="hero-bg hero-bg--a" aria-hidden="true"></div>
+        <div class="hero-bg hero-bg--b" aria-hidden="true"></div>
+
+        <div class="container squish-container hero-content">
             <span class="hero-title"> ATHNA</span>
             <a href="./index.html#shop">
                 <button class="btn hero-btn-pos hero-btn" style="filter: none;">Explore Now</button>
             </a>
         </div>
+
         <script>
-            const images = [
-                './img/ASSEET/LandingPage/1.webp',
-                './img/ASSEET/LandingPage/2.webp',
-                './img/ASSEET/LandingPage/3.webp',
-                './img/ASSEET/LandingPage/4.webp',
-                './img/ASSEET/LandingPage/5.webp',
-                './img/ASSEET/LandingPage/6.webp',
-            ];
-            let currentIndex = 0;
-            const hero = document.getElementById("slideshow");
+            (function () {
+                const images = [
+                    './img/ASSEET/LandingPage/1.webp',
+                    './img/ASSEET/LandingPage/2.webp',
+                    './img/ASSEET/LandingPage/3.webp',
+                    './img/ASSEET/LandingPage/4.webp',
+                    './img/ASSEET/LandingPage/5.webp',
+                    './img/ASSEET/LandingPage/6.webp'
+                ];
 
-            // Preload images for smoother transitions
-            const preloadedImages = [];
-            images.forEach(src => {
-                const img = new Image();
-                img.src = src;
-                preloadedImages.push(img);
-            });
+                const hero = document.getElementById('slideshow');
+                const layerA = hero.querySelector('.hero-bg--a');
+                const layerB = hero.querySelector('.hero-bg--b');
+                let visible = layerA;
+                let currentIndex = 0;
+                let intervalId = null;
 
-            function changeBackground() {
-                hero.style.backgroundImage = `url(${images[currentIndex]})`;
-                hero.style.opacity = 0; // Fade out
+                // Preload + decode images for smoother transitions
+                function preloadAll() {
+                    return Promise.all(images.map(src => {
+                        const img = new Image();
+                        img.src = src;
+                        return img.decode ? img.decode().catch(() => { }) : Promise.resolve();
+                    }));
+                }
 
-                setTimeout(() => {
-                    hero.style.opacity = 1; // Fade in
-                    currentIndex = (currentIndex + 1) % images.length;
-                }, 100);
-            }
+                function setBg(el, src) {
+                    el.style.backgroundImage = 'url(' + src + ')';
+                }
 
-            // Set initial image
-            window.onload = () => {
-                hero.style.backgroundImage = `url(${images[0]}), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))`;
-                hero.style.transition = 'background-image 1s ease-in-out, opacity 1s ease-in-out';
-                setTimeout(() => setInterval(changeBackground, 3000), 1000);
-            };
+                function crossfadeTo(nextIndex) {
+                    const incoming = (visible === layerA) ? layerB : layerA;
+                    setBg(incoming, images[nextIndex]);
+                    incoming.classList.add('visible');
+                    visible.classList.remove('visible');
+                    visible = incoming;
+                    currentIndex = nextIndex;
+                }
 
-            function changeBackground() {
-                hero.style.opacity = 0;
+                async function startSlideshow() {
+                    setBg(layerA, images[0]);
+                    layerA.classList.add('visible');
 
-                setTimeout(() => {
-                    // Use background-blend-mode or multiple backgrounds for darkening
-                    hero.style.backgroundImage = `url(${images[currentIndex]}), linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))`;
-                    hero.style.opacity = 1;
-                    currentIndex = (currentIndex + 1) % images.length;
-                }, 100);
-            }
+                    // decode in background (don't block page paint)
+                    preloadAll().catch(() => { });
+
+                    intervalId = setInterval(() => {
+                        const next = (currentIndex + 1) % images.length;
+                        crossfadeTo(next);
+                    }, 3500);
+                }
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', startSlideshow);
+                } else {
+                    startSlideshow();
+                }
+            })();
         </script>
     </section>
 
     <!-- About Us Section -->
     <section class="container about-us" id="about-us-section">
-       
+
         <div class="about-picture">
             <img src="./img/ASSEET/about2.webp">
             <div class="about-tag">Elevate your everyday wear</div>
@@ -235,18 +251,22 @@
             <div class="category-header">
                 <div class="section-title category-title">
                     <h2>Shop by Category</h2>
-                    
+
                 </div>
                 <div class="category-dropdown">
-                    <button class="dropdown-btn">
+                    <button class="dropdown-btn" id="categoryDropdownBtn"> <!-- Add this ID -->
                         All Categories
                         <span class="dropdown-arrow">▼</span>
                     </button>
-                    <div class="dropdown-menu">
-                        <a href="./Products.html?category=Women casualwear" class="dropdown-item">Casualwear Women Collection</a>
-                        <a href="./Products.html?category=Women Sportwear" class="dropdown-item">Sportwear Women Collection</a>
-                        <a href="./Products.html?category=Men Sportswear" class="dropdown-item">Sportwear Man Collection</a>
-                        <a href="./Products.html?category=Caps%20%26%20Hats" class="dropdown-item">Caps & Hats  Collection</a>
+                    <div class="dropdown-menu" id="categoryDropdownMenu"> <!-- Add this ID -->
+                        <a href="./Products.html?category=Women casualwear" class="dropdown-item">Casualwear Women
+                            Collection</a>
+                        <a href="./Products.html?category=Women Sportwear" class="dropdown-item">Sportwear Women
+                            Collection</a>
+                        <a href="./Products.html?category=Men Sportswear" class="dropdown-item">Sportwear Man
+                            Collection</a>
+                        <a href="./Products.html?category=Caps%20%26%20Hats" class="dropdown-item">Caps & Hats
+                            Collection</a>
                         <a href="./Products.html?category=Accessories" class="dropdown-item">Accessories Collection</a>
                     </div>
                 </div>
@@ -473,8 +493,6 @@
 
     <div class="privacy-modal-overlay" id="privacy-modal-overlay"></div>
 
-    <div class="privacy-modal-overlay" id="privacy-modal-overlay"></div>
-
     <!-- Add the overlay back since your CSS references it -->
     <div class="event-popup-overlay" id="event-popup-overlay"></div>
 
@@ -620,7 +638,7 @@
                 // Disable popup - won't show on page load
                 localStorage.setItem('eventPopupShown', 'true');
                 localStorage.setItem('popupEnabled', 'false');
-                console.log("Popup has been DISABLED");
+                console.log("Event Popup has been DISABLED");
             }
         }
 
@@ -640,28 +658,28 @@
 
     </script>
     <script src="shop-popup.js"></script>
-    
-    <script src="smooth-scroll.js"></script>
-<script>
-    // Optional: Configure smooth scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        if (window.SmoothScroll) {
-            // Customize configuration if needed
-            window.SmoothScroll.setConfig({
-                offset: 80, // Adjust based on your header height
-                duration: 800,
-                easing: 'easeInOutQuad',
-                debug: false // Set to true for debugging
-            });
-            
-            // Re-initialize with custom config
-            window.SmoothScroll.init({
-                preferCSS: true // Try CSS first, fallback to JS
-            });
-        }
-    });
-</script>
 
+    <script src="smooth-scroll.js"></script>
+    <script>
+        // Optional: Configure smooth scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.SmoothScroll) {
+                // Customize configuration if needed
+                window.SmoothScroll.setConfig({
+                    offset: 80, // Adjust based on your header height
+                    duration: 800,
+                    easing: 'easeInOutQuad',
+                    debug: false // Set to true for debugging
+                });
+
+                // Re-initialize with custom config
+                window.SmoothScroll.init({
+                    preferCSS: true // Try CSS first, fallback to JS
+                });
+            }
+        });
+    </script>
+    <script src="shop-category.js"></script>
 </body>
 
 </html>
