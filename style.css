@@ -1129,9 +1129,9 @@ header {
     width: 45px;
     height: 60px;
     background: #d8d8d8;
-    
+
     border-radius: 20%;
-    
+
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 10;
@@ -1145,7 +1145,7 @@ header {
 
 .slider-arrow:hover {
     background: white;
-    
+
     transform: translateY(-50%) scale(1.3);
     box-shadow: 0 3px 12px rgba(70, 72, 59, 0.2);
 }
@@ -1165,12 +1165,12 @@ header {
 
 .prev-arrow {
     left: 0.5rem;
-   
+
 }
 
 .next-arrow {
     right: 3rem;
-    
+
 }
 
 .otw-cat {
@@ -1228,7 +1228,7 @@ header {
     transform: translateY(3px);
     color: var(--secondary-color);
     border: 2px solid black;
-    
+
 }
 
 /* ==========================================================================
@@ -1771,7 +1771,7 @@ header {
     flex-grow: 1;
 }
 
-.size-space{
+.size-space {
     padding: 60px 0;
 }
 
@@ -2293,9 +2293,10 @@ footer .container {
 /* Max Width: 992px */
 @media (max-width: 992px) {
 
-    .dropdown-btn{
+    .dropdown-btn {
         padding: 0px 130px;
     }
+
     .cat-btn-bot {
         padding: 10px 20vw;
     }
@@ -2590,7 +2591,10 @@ footer .container {
 
     .swiper {
         padding: 20px 15px 25px;
+        margin-left: -5vw;
     }
+
+
 
     .swiper-slide {
         opacity: 0.2;
@@ -2601,8 +2605,10 @@ footer .container {
     }
 
     .swiper-slide-active {
-        transform: scale(1.05) !important;
+        transform: scale(1.05) translateX(0) !important;
+        opacity: 1 !important;
     }
+
 
     .swiper-slide-next,
     .swiper-slide-prev {
@@ -3107,7 +3113,7 @@ footer .container {
     .trending-card {
         border-top-left-radius: 30px;
         border-bottom-right-radius: 30px;
-        
+
     }
 
 
@@ -3597,12 +3603,14 @@ footer .container {
 /* Max Width: 480px */
 @media (max-width: 480px) {
     /* ... existing styles ... */
-    
+
     .trending-card .card-img {
         object-fit: contain !important;
-        object-position: top !important; /* Aligns image to top */
-        background-color: #f5f5f5; /* Optional: adds background color for empty space */
+        object-position: top !important;
+        /* Aligns image to top */
+        background-color: #f5f5f5;
+        /* Optional: adds background color for empty space */
     }
-    
+
     /* ... rest of your existing styles ... */
 }
