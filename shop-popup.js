@@ -135,14 +135,15 @@ class ProductPopup {
                     ${product.size.map(s => `<span class="size-tag">${s}</span>`).join('')}
                 </div>
             </div>
-            ` : `<h3 class="placeholder hidden">Available Sizes</h3> <div class="popup-sizes placeholder hidden"><span class="size-tag placeholder hidden">&nbsp;</span></div>`}
-
-            <div class="popup-description">
+                        <div class="popup-description">
                 <p>${product.description}</p>
-            </div>
+            </div>` : `            <div class="popup-description size-space">
+                <p>${product.description}</p>
+            </div>`}
+
 
             <div class="popup-actions">
-                <a href="https://wa.me/6287864853508?text=Hi, I want to order: ${encodeURIComponent(product.name)} (ID: ${product.id}) - Price: ${this.formatPrice(discountedPrice)}"
+                <a href="https://wa.me/6287864853508?text=Hi, I want to order: ${encodeURIComponent(product.name)}- Price: ${this.formatPrice(discountedPrice)}"
                     target="_blank" class="whatsapp-order-btn">
                     <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
                 </a>
@@ -152,6 +153,7 @@ class ProductPopup {
 </div>
         `;
     }
+                //<h3 class="placeholder hidden">Available Sizes</h3> <div class="popup-sizes placeholder hidden"><span class="size-tag placeholder hidden">&nbsp;</span></div> *if want place holder
 
     showProductPopup(productId) {
         const product = this.products.find(p => p.id == productId);

@@ -1,4 +1,4 @@
-// slider-manager.js - WITH INFINITE LOOPING
+// slider-manager.js - WITH INFINITE LOOPING SHOWING 6 CARDS
 
 class CardSlider {
     constructor(containerId, options = {}) {
@@ -16,10 +16,10 @@ class CardSlider {
                 : null;
 
         this.options = {
-            cardsToShow: 3,
-            autoSlide: false,
+            cardsToShow: 6, // Show 6 cards at once
+            autoSlide: false, // Auto-slide turned OFF
             slideInterval: 5000,
-            loop: true, // Added loop option
+            loop: true,
             ...options
         };
 
@@ -32,13 +32,13 @@ class CardSlider {
         this.currentIndex = 0;
 
         this.gestureResetTimer = null;
-        this.isAnimating = false; // To prevent multiple animations
+        this.isAnimating = false;
 
         this.init();
     }
 
     init() {
-        this.setupInfiniteLoop(); // Setup cloned cards for infinite loop
+        this.setupInfiniteLoop();
         this.calculateCardWidth();
         this.createDots();
         this.setupEventListeners();
@@ -51,6 +51,7 @@ class CardSlider {
             }, 10);
         }
 
+        // Auto-slide is disabled by default, but we'll check anyway
         if (this.options.autoSlide) {
             this.startAutoSlide();
         }
@@ -66,8 +67,11 @@ class CardSlider {
         }
 
         // Clone cards for infinite loop effect
-        const firstCards = cards.slice(0, this.options.cardsToShow).map(card => card.cloneNode(true));
-        const lastCards = cards.slice(-this.options.cardsToShow).map(card => card.cloneNode(true));
+        // Clone enough cards to cover the viewport when looping
+        const cloneCount = Math.min(this.totalRealCards, this.options.cardsToShow);
+        
+        const firstCards = cards.slice(0, cloneCount).map(card => card.cloneNode(true));
+        const lastCards = cards.slice(-cloneCount).map(card => card.cloneNode(true));
 
         // Add clones to the DOM
         lastCards.forEach(card => {
@@ -199,9 +203,7 @@ class CardSlider {
         this.isHorizontalSwipe = false;
         this.prevTranslate = this.currentTranslate;
 
-        if (this.autoSlideInterval) {
-            clearInterval(this.autoSlideInterval);
-        }
+        // Auto-slide is disabled, so no need to clear interval
     }
 
     handleTouchMove(e) {
@@ -248,9 +250,7 @@ class CardSlider {
             this.isHorizontalSwipe = false;
         }, 100);
 
-        if (this.options.autoSlide) {
-            this.startAutoSlide();
-        }
+        // Auto-slide is disabled, so no need to restart
     }
 
     handleMouseDown(e) {
@@ -284,10 +284,13 @@ class CardSlider {
         this.wrapper.style.transition = 'transform 0.3s ease';
 
         const movedBy = this.currentTranslate - this.prevTranslate;
-        const threshold = this.cardFullWidth / 4;
+        // Threshold determines when to move to next/prev slide
+        const threshold = this.cardFullWidth / 3;
 
         if (Math.abs(movedBy) > threshold) {
-            this.slideToIndex(this.currentIndex + (movedBy < 0 ? 1 : -1));
+            // Move by one card width (which shows 6 cards)
+            const direction = movedBy < 0 ? 1 : -1;
+            this.slideToIndex(this.currentIndex + direction);
         } else {
             this.slideToIndex(this.currentIndex);
         }
@@ -300,6 +303,7 @@ class CardSlider {
     slideToIndex(index, animate = true) {
         if (this.isAnimating) return;
 
+        // Ensure index is within bounds
         index = Math.max(0, Math.min(index, this.maxIndex));
         
         if (!animate) {
@@ -320,18 +324,20 @@ class CardSlider {
             this.isAnimating = true;
             
             setTimeout(() => {
-                // Check if we need to jump to the other side
+                // Check if we're near the beginning (in cloned cards)
                 if (this.currentIndex <= this.options.cardsToShow - 1) {
-                    // Jump to the end
+                    // Jump to the corresponding real cards at the end
                     this.wrapper.style.transition = 'none';
                     this.currentIndex = this.maxIndex - (this.options.cardsToShow - 1 - this.currentIndex);
                     this.currentTranslate = -(this.currentIndex * this.cardFullWidth);
                     this.prevTranslate = this.currentTranslate;
                     this.setSliderPosition();
-                } else if (this.currentIndex >= this.maxIndex - (this.options.cardsToShow - 1)) {
-                    // Jump to the beginning
+                } 
+                // Check if we're near the end (in cloned cards)
+                else if (this.currentIndex >= this.maxIndex - (this.options.cardsToShow - 1)) {
+                    // Jump to the corresponding real cards at the beginning
                     this.wrapper.style.transition = 'none';
-                    this.currentIndex = this.options.cardsToShow - 1 + (this.currentIndex - (this.maxIndex - (this.options.cardsToShow - 1)));
+                    this.currentIndex = this.currentIndex - (this.maxIndex - (this.options.cardsToShow - 1)) + (this.options.cardsToShow - 1);
                     this.currentTranslate = -(this.currentIndex * this.cardFullWidth);
                     this.prevTranslate = this.currentTranslate;
                     this.setSliderPosition();
@@ -361,12 +367,15 @@ class CardSlider {
     }
 
     startAutoSlide() {
+        // This method is kept but auto-slide is disabled by default
         clearInterval(this.autoSlideInterval);
-        this.autoSlideInterval = setInterval(() => {
-            if (!this.isAnimating) {
-                this.slideNext();
-            }
-        }, this.options.slideInterval);
+        if (this.options.autoSlide) {
+            this.autoSlideInterval = setInterval(() => {
+                if (!this.isAnimating) {
+                    this.slideNext();
+                }
+            }, this.options.slideInterval);
+        }
     }
 }
 
@@ -375,7 +384,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.cards-slider-container').forEach(container => {
         if (container.id) {
             window.sliders[container.id] = new CardSlider(container.id, {
-                loop: true // Enable infinite loop
+                loop: true,           // Enable infinite loop
+                cardsToShow: 6,        // Show 6 cards at once
+                autoSlide: false       // Auto-slide turned OFF
             });
         }
     });

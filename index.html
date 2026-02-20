@@ -256,7 +256,7 @@
                 <div class="category-dropdown">
                     <button class="dropdown-btn" id="categoryDropdownBtn"> <!-- Add this ID -->
                         All Categories
-                        <span class="dropdown-arrow">▼</span>
+                        <i class="fa-solid fa-caret-down dropdown-arrow"></i>
                     </button>
                     <div class="dropdown-menu" id="categoryDropdownMenu"> <!-- Add this ID -->
                         <a href="./Products.html?category=Women casualwear" class="dropdown-item">Casualwear Women
@@ -304,7 +304,7 @@
 
             function fmtPrice(p) {
                 if (p === undefined || p === null) return '';
-                return 'Rp ' + Math.round(p).toLocaleString();
+                return 'Rp ' + Math.round(p).toLocaleString()+', -IDR';
             }
 
             fetch('./products.json')
@@ -393,11 +393,11 @@
 
     <!--cat-btn-bot-->
     <section class="concat">
-        <a href="./Products.html?category=Women casualwear" class=" cat-btn-bot">Casualwear Women Collection</a>
-        <a href="./Products.html?category=Women Sportwear" class=" cat-btn-bot">Sportwear Women Collection</a>
-        <a href="./Products.html?category=Men Sportswear" class=" cat-btn-bot">Sportswear Men Collection</a>
-        <a href="./Products.html?category=Caps%20%26%20Hats" class=" cat-btn-bot">Caps & Hats Collection</a>
-        <a href="./Products.html?category=Accessories" class=" cat-btn-bot">Accessories Collection</a>
+        <a href="./Products.html?category=Women casualwear" class="cat-btn-bot">Casualwear Women Collection</a>
+        <a href="./Products.html?category=Women Sportwear" class="cat-btn-bot">Sportwear Women Collection</a>
+        <a href="./Products.html?category=Men Sportswear" class="cat-btn-bot">Sportswear Men Collection</a>
+        <a href="./Products.html?category=Caps%20%26%20Hats" class="cat-btn-bot">Caps & Hats Collection</a>
+        <a href="./Products.html?category=Accessories" class="cat-btn-bot">Accessories Collection</a>
     </section>
 
 

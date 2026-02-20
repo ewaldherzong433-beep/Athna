@@ -547,7 +547,7 @@ header {
 .swiper {
     width: 100%;
     height: auto;
-    padding: 60px 20px 40px;
+    padding: 60px 0 40px;
     position: relative;
 }
 
@@ -575,6 +575,7 @@ header {
 .swiper-slide-prev {
     transform: scale(0.85) translateX(10vw) !important;
     /* Geser ke kanan */
+    margin-left: 30px;
     opacity: 0.7 !important;
     z-index: 2;
 }
@@ -583,6 +584,7 @@ header {
 .swiper-slide-next {
     transform: scale(0.85) translateX(-10vw) !important;
     /* Geser ke kiri */
+    margin-right: 30px;
     opacity: 0.7 !important;
     z-index: 2;
 }
@@ -793,10 +795,7 @@ header {
     justify-content: center;
 }
 
-.dropdown-arrow {
-    margin-left: 5px;
-    font-size: 10px;
-}
+
 
 .dropdown-menu {
     position: absolute;
@@ -857,19 +856,9 @@ header {
     display: inline-block;
     padding-bottom: 10px;
     font-family: var(--font2, "Cinzel"), serif;
-    font-weight: 400;
+    font-weight: 600;
 }
 
-.prod-land-tit h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 3px;
-    background: var(--background2);
-}
 
 .cards-slider-container {
     position: relative;
@@ -1138,11 +1127,11 @@ header {
     top: 50%;
     transform: translateY(-50%);
     width: 45px;
-    height: 45px;
-    background: var(--primary-color);
-    border: 2px solid var(--text-on-primary);
-    border-radius: 50%;
-    box-shadow: 0 3px 12px rgba(70, 72, 59, 0.2);
+    height: 60px;
+    background: #d8d8d8;
+    
+    border-radius: 20%;
+    
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 10;
@@ -1150,14 +1139,15 @@ header {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    color: var(--text-on-primary);
+    color: #000;
     font-family: var(--font2, "Cinzel"), serif;
 }
 
 .slider-arrow:hover {
-    background: var(--primary-color);
-    color: var(--text-on-primary);
-    transform: translateY(-50%) scale(1.1);
+    background: white;
+    
+    transform: translateY(-50%) scale(1.3);
+    box-shadow: 0 3px 12px rgba(70, 72, 59, 0.2);
 }
 
 .slider-arrow:disabled {
@@ -1175,12 +1165,12 @@ header {
 
 .prev-arrow {
     left: 0.5rem;
-    display: none;
+   
 }
 
 .next-arrow {
     right: 3rem;
-    display: none;
+    
 }
 
 .otw-cat {
@@ -1234,10 +1224,11 @@ header {
 .cat-btn-bot:hover {
     content: "";
     background-color: white;
-    transition: 0.3s;
+    transition: 0.3s ease;
     transform: translateY(3px);
     color: var(--secondary-color);
-    border: 5px solid black;
+    border: 2px solid black;
+    
 }
 
 /* ==========================================================================
@@ -1779,6 +1770,11 @@ header {
     margin-top: 25px;
     flex-grow: 1;
 }
+
+.size-space{
+    padding: 60px 0;
+}
+
 
 .popup-description h3 {
     color: var(--background2);
@@ -3433,7 +3429,7 @@ footer .container {
 
 .dropdown-arrow {
     margin-left: 5px;
-    font-size: 10px;
+    font-size: 19px;
     display: inline-block;
     transition: transform 0.3s ease;
     /* ONLY ADDED: smooth arrow rotation */
