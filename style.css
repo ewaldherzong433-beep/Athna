@@ -326,7 +326,7 @@ header {
 .hero {
     color: var(--background);
     text-align: center;
-    padding: 370px 20px;
+    padding: 300px 20px;
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 1.11vh;
@@ -340,10 +340,10 @@ header {
     border-bottom-left-radius: 150px;
     height: auto;
     min-height: 600px;
-    margin-top: 10.2vh;
+    margin-top: 12.2vh;
     background-blend-mode: overlay;
     /* removed conflicting max-height */
-    max-height: 89vh;
+    max-height: 85vh;
 }
 
 .hero-bg {
@@ -898,6 +898,7 @@ header {
     height: 100%;
     display: flex;
     flex-direction: column;
+    
 }
 
 .product-card:hover {
@@ -908,7 +909,7 @@ header {
 /* Product Card with Image Hover Effect */
 .product-image-container {
     width: 100%;
-    height: 185px;
+    
     position: relative;
     overflow: hidden;
     border-radius: 4px;
@@ -932,7 +933,7 @@ header {
 
 .product-image.hover-image {
     opacity: 0;
-    z-index: 2;
+    z-index: 0;
 }
 
 /* Only apply hover effect if hover-image exists */
@@ -962,7 +963,7 @@ header {
 }
 
 .product-name {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     font-family: var(--font2);
     color: #333;
@@ -981,7 +982,7 @@ header {
 .product-price {
     font-weight: 300;
     font-family: var(--font2);
-    font-size: 1em;
+    font-size: 0.9em;
     color: #2c3e50;
     margin: 5px 0;
     display: flex;
@@ -989,7 +990,6 @@ header {
     gap: 8px;
     flex-wrap: wrap;
     margin-top: auto;
-    font-weight: bold;
 }
 
 .original-price {
@@ -1402,6 +1402,7 @@ header {
     padding-left: 100px;
     transform: translateX(-10%);
     border: 3px solid black;
+    border-left: none;
 }
 
 .shopcon .btn {
@@ -1596,22 +1597,19 @@ header {
 
 }
 
-.main-image-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-}
+
 
 .popup-content.horizontal-layout .main-image-container {
     max-width: 100%;
+    height: 100%;
 }
 
 .main-image:not(.popup-content .main-image) {
     width: 100%;
-    height: 200px;
     object-fit: contain;
     border-radius: 23px 0;
     background: white;
+    height: 100%;
 
 
 }
@@ -1807,7 +1805,7 @@ header {
     color: white;
 
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 40px;
     text-align: center;
     font-weight: bold;
     display: flex;
@@ -1832,7 +1830,7 @@ header {
 }
 
 .popup-content.horizontal-layout .whatsapp-order-btn {
-    padding: 18px 25px;
+    padding: 9px 25px;
     font-size: 17px;
 }
 
@@ -2159,10 +2157,8 @@ footer .container {
    ========================================================================== */
 
 /* Max Width: 1400px */
-@media (max-width: 1400px) {
-    .product-image-container {
-        height: 400px;
-    }
+@media (max-width: 1440px) {
+
 
     .swiper {
         padding: 50px 40px 40px;
@@ -2180,9 +2176,6 @@ footer .container {
 
 /* Max Width: 1200px */
 @media (max-width: 1200px) {
-    .product-image-container {
-        height: 340px;
-    }
 
     .highlight {
         padding: 60px 0 30px;
@@ -2234,9 +2227,7 @@ footer .container {
         max-width: 1300px;
     }
 
-    .main-image {
-        height: 200px;
-    }
+
 
     .popup-content.horizontal-layout .main-image {
         height: 350px;
@@ -2244,11 +2235,18 @@ footer .container {
 
     .cat-btn-bot {
         padding: 10px 30vw;
+
     }
 }
 
 /* Max Width: 1024px */
 @media (max-width: 1024px) {
+    .hero {
+        margin-top: 12.2vh;
+
+        padding: 26vh 20px;
+    }
+
     .product-card {
         flex: 0 0 250px;
         padding: 20px;
@@ -2294,12 +2292,9 @@ footer .container {
     }
 
     .nav-link {
-        font-size: 18px;
+        font-size: 22px;
     }
 
-    .product-image-container {
-        height: 270px;
-    }
 
     .highlight {
         padding: 50px 0 30px;
@@ -2362,16 +2357,10 @@ footer .container {
         max-width: 900px;
     }
 
-    .popup-content.horizontal-layout .popup-images,
-    .popup-content.horizontal-layout .popup-details {}
-
     .main-image {
         height: 180px;
     }
 
-    .popup-content.horizontal-layout .main-image {
-        height: 320px;
-    }
 
     .popup-content.horizontal-layout .popup-title {
         font-size: 24px;
@@ -2380,6 +2369,15 @@ footer .container {
 
 /* Max Width: 768px (Tablet / Mobile Breakpoint) */
 @media (max-width: 768px) {
+
+    .product-name{
+        font-size: 0.9rem;
+    }
+    .product-price{
+        font-size: 0.8rem;
+    }
+
+
 
     .dropdown-btn {
         font-size: 16px;
@@ -2390,7 +2388,9 @@ footer .container {
     }
 
     .hero {
-        margin-top: 12vh;
+        margin-top: 13.2vh;
+        padding: 260px 20px;
+        max-height: 88vh;
     }
 
     .desktop-header:not(footer .desktop-header) {
@@ -2412,10 +2412,6 @@ footer .container {
     .hero .btn {
         padding: 10px 35px;
         min-width: 200px;
-    }
-
-    .hero {
-        padding: 260px 20px;
     }
 
     .about-tag {
@@ -2457,7 +2453,7 @@ footer .container {
     }
 
     .trending-card {
-        width: 90%;
+        width: 100%;
         max-width: 320px;
         border-top-left-radius: 50px;
         border-bottom-right-radius: 50px;
@@ -2548,30 +2544,16 @@ footer .container {
         flex-direction: column;
         max-height: 95vh;
         max-width: 95%;
-        border-bottom-right-radius: 80px;
-        border-top-left-radius: 80px;
     }
 
-    .popup-content.horizontal-layout .popup-images,
-    .popup-content.horizontal-layout .popup-details {
-        width: 90%;
-    }
 
     .popup-content.horizontal-layout .popup-images {
-        border-top-left-radius: 80px;
-        border-top-right-radius: 80px;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         padding: 20px;
     }
 
-    .popup-content.horizontal-layout .popup-details {
-        border-bottom-right-radius: 80px;
-        border-bottom-left-radius: 80px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
 
-    }
 
     .main-image {
         height: 150px;
@@ -2586,7 +2568,12 @@ footer .container {
     }
 
     .popup-content.horizontal-layout .main-image {
-        height: 210px;
+        height: 300px;
+        
+    }
+    .boxs {
+        box-shadow: none;
+        border-radius: 0;
     }
 
     .popup-content .popup-title {
@@ -2595,6 +2582,7 @@ footer .container {
 
     .popup-actions {
         flex-direction: column;
+
     }
 
     .whatsapp-order-btn {
@@ -2668,10 +2656,6 @@ footer .container {
         padding: 6px 8px;
     }
 
-    .product-image-container {
-        height: 200px;
-        border-radius: 18px 0;
-    }
 
     .contact h2 {
         font-size: 5.3vw;
@@ -2683,13 +2667,16 @@ footer .container {
 
     .cat-btn-bot {
         padding: 10px 13vw;
+        font-size: 1.2rem;
     }
 }
 
 /* Max Width: 576px */
 @media (max-width: 576px) {
-    .product-image-container {
-        height: 190px;
+        
+    .cat-btn-bot {
+        padding: 10px 13vw;
+        font-size: 1rem;
     }
 
     .contact h2 {
@@ -2825,26 +2812,15 @@ footer .container {
 
     .popup-content {
         border-width: 1.5vh;
-        border-bottom-right-radius: 60px;
-        border-top-left-radius: 60px;
+
         z-index: 10001 !important;
     }
 
-    .popup-content.horizontal-layout {
-        border-bottom-right-radius: 60px;
-        border-top-left-radius: 60px;
-    }
-
     .popup-content.horizontal-layout .popup-images {
-        border-top-left-radius: 60px;
-        border-top-right-radius: 60px;
         padding: 15px;
     }
 
-    .popup-content.horizontal-layout .popup-details {
-        border-bottom-right-radius: 60px;
-        border-bottom-left-radius: 60px;
-    }
+
 
     .popup-content.horizontal-layout .main-image {
         height: 220px;
@@ -2882,8 +2858,6 @@ footer .container {
     .whatsapp-order-btn {
         padding: 14px 20px;
         font-size: 15px;
-        border-bottom-right-radius: 60px;
-        border-top-left-radius: 60px;
     }
 
     .event-popup-content {
@@ -2969,6 +2943,19 @@ footer .container {
 
 /* Max Width: 480px */
 @media (max-width: 480px) {
+
+        .cat-btn-bot {
+        padding: 10px 13vw;
+        font-size: 0.9rem;
+    }
+
+        .product-name{
+        font-size: 0.8rem;
+    }
+    .product-price{
+        font-size: 0.7rem;
+    }
+
     .card-content {
         margin-left: 20px;
     }
@@ -2983,10 +2970,7 @@ footer .container {
         padding: 0 10px 0 10px;
     }
 
-    .product-card {
-        padding: 8px;
-        width: 110px;
-    }
+
 
     .card-content h3 {
         font-size: 0.8rem;
@@ -2996,9 +2980,6 @@ footer .container {
         font-size: 0.7rem;
     }
 
-    .product-image-container {
-        height: 130px;
-    }
 
     .shopcon .btn {
         padding: 1px 4px;
@@ -3120,8 +3101,7 @@ footer .container {
 
     .product-card {
         padding: 10px;
-        width: 115px;
-        border-radius: 14.849px 0 5.94px 0;
+        border-radius: 33px 0;
     }
 }
 
@@ -3163,25 +3143,12 @@ footer .container {
 
     .popup-content {
         border-width: 1vh;
-        border-bottom-right-radius: 40px;
-        border-top-left-radius: 40px;
     }
 
-    .popup-content.horizontal-layout {
-        border-bottom-right-radius: 40px;
-        border-top-left-radius: 40px;
-    }
+
 
     .popup-content.horizontal-layout .popup-images {
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
         padding: 12px;
-    }
-
-    .popup-content.horizontal-layout .popup-details {
-        border-bottom-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-
     }
 
     .popup-content.horizontal-layout .main-image {
@@ -3240,10 +3207,8 @@ footer .container {
     }
 
     .whatsapp-order-btn {
-        padding: 12px 15px;
+        padding: 10px 15px;
         font-size: 14px;
-        border-bottom-right-radius: 40px;
-        border-top-left-radius: 40px;
         gap: 8px;
     }
 
@@ -3259,10 +3224,6 @@ footer .container {
 
 /* Max Width: 380px */
 @media (max-width: 380px) {
-    .pagination-controls {
-        flex-direction: column;
-        gap: 12px;
-    }
 
     .card-content {
         margin-left: 5px;
@@ -3281,8 +3242,7 @@ footer .container {
     }
 
     .product-card {
-        padding: 0;
-        width: 90px;
+
         border-radius: 14.849px 0 5.94px 0;
     }
 }
@@ -3352,7 +3312,6 @@ footer .container {
         height: 250px;
     }
 
-    .popup-content.horizontal-layout .popup-details {}
 
     .popup-content.horizontal-layout .popup-title {
         font-size: 22px;
@@ -3373,8 +3332,7 @@ footer .container {
         height: 180px;
     }
 
-    .popup-content.horizontal-layout .popup-images,
-    .popup-content.horizontal-layout .popup-details {}
+
 
     .popup-content.horizontal-layout .popup-title {
         font-size: 20px;
@@ -3548,3 +3506,79 @@ footer .container {
 /* ==========================================================================
    END OF ADDITIONS - EVERYTHING BELOW THIS LINE IS YOUR ORIGINAL CSS
    ========================================================================== */
+   
+   /* Ensure the popup images container is properly constrained */
+.popup-images {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill parent */
+    min-height: 0; /* Important for flex children */
+}
+
+/* For the main image wrapper */
+.main-image-wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0; /* Critical for flexbox to respect parent height */
+    width: 100%;
+}
+
+/* For horizontal layout */
+.popup-content.horizontal-layout .popup-images {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 600px;
+}
+
+.popup-content.horizontal-layout .main-image-wrapper {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* the popup images container is properly constrained */
+
+
+
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-image.main-image {
+    opacity: 1;
+    z-index: 1;
+    position: relative; /* Change this from absolute to relative */
+}
+
+.product-image.hover-image {
+    opacity: 0;
+    z-index: 2;
+    position: absolute; /* Keep this absolute */
+    top: 0;
+    left: 0;
+}
+
+/* Only apply hover effect if hover-image exists */
+.product-card:has(.hover-image):hover .product-image.main-image {
+    opacity: 0;
+}
+
+.product-card:has(.hover-image):hover .product-image.hover-image {
+    opacity: 1;
+}
+
+/* For products without hover image, the main image stays visible */
+.product-card:not(:has(.hover-image)) .product-image.main-image {
+    position: relative;
+}

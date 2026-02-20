@@ -65,7 +65,8 @@ class Product {
                 <div class="product-image-container">
                     <img src="${mainImage}" alt="${this.name}" class="product-image main-image" loading="lazy">
                     ${hasMultipleImages ? `<img src="${this.images[1]}" alt="${this.name}" class="product-image hover-image" loading="lazy">` : ''}
-                </div>
+                    </div>
+                
                 <h3 class="product-name">${this.name}</h3>                
                 <div class="product-price">
                     ${hasDiscount ?
@@ -73,6 +74,7 @@ class Product {
                          <span class="discounted-price">${this.formatPrice(discountedPrice)}</span>`
                 : this.formatPrice(this.price)
             }
+           
                 </div>
             </div>
         `;
@@ -115,9 +117,9 @@ class Product {
             
             ${hasSizes ? `
             <div class="popup-sizes">
-                <div class="size-options">
+                
                     ${Array.isArray(this.size) && this.size.length > 0
-                        ? "<h3>Available Sizes</h3>"+this.size.map(s => `<span class="size-tag">${s}</span>`).join('')
+                        ? `<h3>Available Sizes</h3> <div class="size-options">`+this.size.map(s => `<span class="size-tag">${s}</span>`).join('')
                         : `<span class="size-tag placeholder hidden">&nbsp;</span>`}
                 </div>
             </div>

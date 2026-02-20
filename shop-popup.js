@@ -127,14 +127,15 @@ class ProductPopup {
                 : `<span class="current-price">${this.formatPrice(product.price)}</span>`
             }
             </div>
-            <div class="popup-sizes">
 
-                ${hasSizes ? `<h3>Available Sizes</h3>
+            ${hasSizes ? `
+            <h3>Available Sizes</h3>
+            <div class="popup-sizes">
                 <div class="size-options">
                     ${product.size.map(s => `<span class="size-tag">${s}</span>`).join('')}
                 </div>
             </div>
-            ` : `<span class="size-tag placeholder hidden">&nbsp;</span>`}
+            ` : `<h3 class="placeholder hidden">Available Sizes</h3> <div class="popup-sizes placeholder hidden"><span class="size-tag placeholder hidden">&nbsp;</span></div>`}
 
             <div class="popup-description">
                 <p>${product.description}</p>
