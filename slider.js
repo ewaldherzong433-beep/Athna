@@ -16,7 +16,7 @@ class CardSlider {
                 : null;
 
         this.options = {
-            cardsToShow: 6, // Show 6 cards at once
+            cardsToShow: 1, // Show 6 cards at once
             autoSlide: false, // Auto-slide turned OFF
             slideInterval: 5000,
             loop: true,
@@ -27,6 +27,7 @@ class CardSlider {
         this.isHorizontalSwipe = false;
         this.startX = 0;
         this.startY = 0;
+        this.initialX = 0;
         this.currentTranslate = 0;
         this.prevTranslate = 0;
         this.currentIndex = 0;
@@ -203,7 +204,11 @@ class CardSlider {
         this.isHorizontalSwipe = false;
         this.prevTranslate = this.currentTranslate;
 
-        // Auto-slide is disabled, so no need to clear interval
+        // Store the initial position for better direction detection
+        this.initialX = this.startX;
+        
+        // Remove any transition while dragging
+        this.wrapper.style.transition = 'none';
     }
 
     handleTouchMove(e) {
@@ -225,13 +230,14 @@ class CardSlider {
                 this.isDragging = true;
                 this.wrapper.style.transition = 'none';
                 this.wrapper.classList.add('dragging');
-                e.preventDefault();
+                e.preventDefault(); // Prevent page scroll
             } else {
-                return;
+                return; // Vertical scroll - let the page scroll
             }
         }
 
         if (this.isDragging) {
+            e.preventDefault(); // Prevent page scroll while dragging horizontally
             this.currentTranslate = this.prevTranslate + diffX;
             this.setSliderPosition();
         }
@@ -260,6 +266,7 @@ class CardSlider {
         this.startX = e.clientX;
         this.prevTranslate = this.currentTranslate;
         this.isDragging = true;
+        this.wrapper.style.transition = 'none';
 
         const move = (e) => {
             if (this.isAnimating) return;
@@ -288,7 +295,8 @@ class CardSlider {
         const threshold = this.cardFullWidth / 3;
 
         if (Math.abs(movedBy) > threshold) {
-            // Move by one card width (which shows 6 cards)
+            // FIXED: When movedBy is negative (swipe left), we want to go to next slide (+1)
+            // When movedBy is positive (swipe right), we want to go to previous slide (-1)
             const direction = movedBy < 0 ? 1 : -1;
             this.slideToIndex(this.currentIndex + direction);
         } else {
@@ -385,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (container.id) {
             window.sliders[container.id] = new CardSlider(container.id, {
                 loop: true,           // Enable infinite loop
-                cardsToShow: 6,        // Show 6 cards at once
+                cardsToShow: 1,        // Show 6 cards at once
                 autoSlide: false       // Auto-slide turned OFF
             });
         }
