@@ -73,7 +73,7 @@ img {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
-    max-width: 88%;
+    max-width: 100%;
 }
 
 .btn {
@@ -2948,6 +2948,14 @@ footer .container {
 
 /* Max Width: 480px */
 @media (max-width: 480px) {
+    /*highlight item +besar*/
+    .swiper {
+        padding: 60px 10px;
+    }
+
+    .swiper-slide-active {
+        transform: scale(1.9) !important;
+    }
 
     .cat-btn-bot {
         padding: 10px 13vw;
@@ -3124,11 +3132,6 @@ footer .container {
     .highlight {
         padding: 20px 0 10px;
     }
-
-    .swiper {
-        padding: 10px 5px 15px;
-    }
-
     .trending-card {
         width: 100%;
         max-width: 280px;
@@ -3613,4 +3616,34 @@ footer .container {
     }
 
     /* ... rest of your existing styles ... */
+}
+
+
+@media (max-width: 768px) {
+    .highlight {
+        overflow: visible !important;
+    }
+    
+    .highlight .container {
+        overflow: visible !important;
+        padding: 20px 30px;
+    }
+    
+    .swiper {
+        overflow: visible !important;
+    }
+    
+    .swiper-wrapper {
+        overflow: visible !important;
+    }
+    
+    .swiper-slide {
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .highlight .container {
+        padding: 20px 20px;
+    }
 }
