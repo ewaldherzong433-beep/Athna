@@ -16,7 +16,7 @@ class CardSlider {
                 : null;
 
         this.options = {
-            cardsToShow: 1, // Show 6 cards at once
+            cardsToShow: 6, // Show 6 cards at once
             autoSlide: false, // Auto-slide turned OFF
             slideInterval: 5000,
             loop: true,
