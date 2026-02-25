@@ -122,6 +122,7 @@ header {
     justify-content: space-between;
     padding: 20px 0;
     min-height: 70px;
+    justify-content: space-evenly;
 }
 
 .header-nav {
@@ -145,6 +146,7 @@ header {
     padding: 8px 0;
     position: relative;
     transition: all 0.3s ease;
+    margin-left: 5vw;
 }
 
 .nav-link {
@@ -2671,9 +2673,7 @@ footer .container {
         height: 250px;
     }
 
-    .slider-arrow {
-        display: none;
-    }
+
 
 
 
@@ -2948,6 +2948,8 @@ footer .container {
 
 /* Max Width: 480px */
 @media (max-width: 480px) {
+
+
     /*highlight item +besar*/
     .swiper {
         padding: 60px 10px;
@@ -3132,6 +3134,7 @@ footer .container {
     .highlight {
         padding: 20px 0 10px;
     }
+
     .trending-card {
         width: 100%;
         max-width: 280px;
@@ -3515,6 +3518,10 @@ footer .container {
         font-size: 9px;
         z-index: 20;
     }
+
+    .mobhidden {
+        opacity: 0;
+    }
 }
 
 /* ==========================================================================
@@ -3623,20 +3630,20 @@ footer .container {
     .highlight {
         overflow: visible !important;
     }
-    
+
     .highlight .container {
         overflow: visible !important;
         padding: 20px 30px;
     }
-    
+
     .swiper {
         overflow: visible !important;
     }
-    
+
     .swiper-wrapper {
         overflow: visible !important;
     }
-    
+
     .swiper-slide {
         overflow: visible !important;
     }
@@ -3646,4 +3653,12 @@ footer .container {
     .highlight .container {
         padding: 20px 20px;
     }
+}
+
+
+.priv-link{
+    font-size : 13px;
+}
+.priv-link:hover{
+    color:white;
 }
