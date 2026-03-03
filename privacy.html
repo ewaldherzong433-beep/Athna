@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* ==========================================================================
@@ -513,6 +515,7 @@
             justify-content: center;
             margin-top: 40px;
             flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .policy-btn {
@@ -537,7 +540,11 @@
             transform: translateY(-3px);
         }
 
-
+        .policy-btn.active {
+            background: var(--background2);
+            color: var(--text-on-primary);
+            border-color: var(--background2);
+        }
 
         .last-updated {
             text-align: center;
@@ -554,121 +561,52 @@
             color: var(--text-on-primary);
         }
 
-        /* Return Policy Modal */
-        .modal {
+        /* Policy Content Sections */
+        .policy-content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .policy-content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Floating Back Button for Mobile */
+        .floating-back {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(70, 72, 59, 0.8);
-            z-index: 10000;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        .modal-content {
-            background: white;
-            border-radius: 100px 20px 100px 20px;
-            max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-            border: 3px solid var(--background2);
-            animation: modalSlideIn 0.4s ease-out;
-            position: relative;
-        }
-
-        @keyframes modalSlideIn {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            background: var(--background2);
-            color: white;
-            padding: 30px;
-            position: relative;
-            border-bottom: 3px solid var(--text-on-primary);
-        }
-
-        .modal-header h2 {
-            font-family: 'Cinzel';
-            font-size: 2rem;
-            margin-bottom: 10px;
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 20px;
+            bottom: 20px;
             right: 20px;
-            background: white;
-            border: none;
-            color: black;
-            font-size: 1.8rem;
-            cursor: pointer;
-            width: 40px;
-            height: 40px;
+            background: var(--background2);
+            color: var(--text-on-primary);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
-            display: flex;
+            text-decoration: none;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s;
-            border: 2px solid var(--background2);
+            box-shadow: 0 4px 15px rgba(70, 72, 59, 0.4);
+            z-index: 100;
+            transition: all 0.3s ease;
+            border: 2px solid var(--text-on-primary);
         }
 
-        .close-modal:hover {
-            background: var(--background2);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        .modal-body {
-            padding: 40px;
-        }
-
-        .modal-body h3 {
+        .floating-back:hover {
+            transform: scale(1.1);
+            background: var(--text-on-primary);
             color: var(--background2);
-            margin: 30px 0 15px;
-            font-family: 'Cinzel';
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .modal-body h3:first-child {
-            margin-top: 0;
-        }
-
-        .modal-body h3 i {
-            color: var(--text-on-primary);
-        }
-
-        .modal-body ul {
-            list-style: none;
-            margin: 15px 0 25px;
-        }
-
-        .modal-body ul li {
-            margin-bottom: 12px;
-            padding-left: 30px;
-            position: relative;
-            color: #555;
         }
 
         /* Footer */
@@ -764,32 +702,6 @@
             text-align: center;
         }
 
-        /* Floating Back Button for Mobile */
-        .floating-back {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--background2);
-            color: var(--text-on-primary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(70, 72, 59, 0.4);
-            z-index: 100;
-            transition: all 0.3s ease;
-            border: 2px solid var(--text-on-primary);
-        }
-
-        .floating-back:hover {
-            transform: scale(1.1);
-            background: var(--text-on-primary);
-            color: var(--background2);
-        }
-
         /* ==========================================================================
        5. MEDIA QUERIES
        ========================================================================== */
@@ -808,6 +720,10 @@
         }
 
         @media (max-width: 768px) {
+            .mobhidden {
+                visibility: hidden;
+            }
+
             .desktop-header:not(footer .desktop-header) {
                 display: none;
             }
@@ -880,14 +796,6 @@
                 border-radius: 40px 0 40px 0;
             }
 
-            .modal-header h2 {
-                font-size: 1.8rem;
-            }
-
-            .modal-body {
-                padding: 30px;
-            }
-
             .footer-menu {
                 gap: 20px;
                 flex-wrap: wrap;
@@ -904,6 +812,7 @@
             .privacy-hero {
                 padding: 120px 20px 50px;
             }
+
 
             .privacy-hero p {
                 font-size: 1rem;
@@ -929,32 +838,6 @@
                 padding: 15px;
                 font-size: 0.95rem;
             }
-
-            .modal-content {
-                border-radius: 60px 10px 60px 10px;
-            }
-
-            .modal-header {
-                padding: 25px;
-            }
-
-            .modal-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .modal-body {
-                padding: 25px;
-            }
-
-            .modal-body h3 {
-                font-size: 1.3rem;
-            }
-
-            .close-modal {
-                width: 35px;
-                height: 35px;
-                font-size: 1.5rem;
-            }
         }
 
         @media (max-width: 480px) {
@@ -969,19 +852,16 @@
             .policy-section ul li {
                 padding-left: 25px;
             }
-
-            .modal-body {
-                padding: 20px;
-            }
-
-            .modal-body h3 {
-                font-size: 1.2rem;
-            }
         }
 
         /* Print styles */
         @media print {
-            header, footer, .back-button-container, .floating-back, .policy-buttons {
+
+            header,
+            footer,
+            .back-button-container,
+            .floating-back,
+            .policy-buttons {
                 display: none;
             }
 
@@ -1011,6 +891,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -1076,8 +957,9 @@
         </div>
 
         <div class="privacy-hero-content">
-            <h1>Privacy Policy</h1>
-            <p>Your privacy is important to us. Learn how we protect and manage your data at ATHNA.</p>
+            <h1 id="policy-title">Privacy Policy</h1>
+            <p id="policy-subtitle">Your privacy is important to us. Learn how we protect and manage your data at ATHNA.
+            </p>
         </div>
     </section>
 
@@ -1086,59 +968,134 @@
         <div class="policy-content">
             <div class="last-updated">
                 <i class="fas fa-calendar-alt"></i>
-                Last Updated: February 25, 2026
+                Last Updated: March 03, 2026
             </div>
 
-            <!-- Privacy Policy Sections (Updated with provided details) -->
-            <div class="policy-section">
-                <h2><i class="fas fa-database"></i> Information We Collect</h2>
-                <p>To process your orders and provide the best possible service, we collect the following personal information:</p>
-                <ul>
-                    <li><strong>Personal Information:</strong> Name, phone numbers, and shipping addresses.</li>
-                    <li><strong>Conversation Data:</strong> Order details and shipping information exchanged via WhatsApp conversations, as this is our primary method of communication and order processing.</li>
-                    <li><strong>Usage Data:</strong> Information about how you use our website and services.</li>
-                    <li><strong>Device Information:</strong> IP address, browser type, and operating system for analytical purposes.</li>
-                </ul>
-                <p><strong>Note on Cookies:</strong> We do not use cookies on our website to track personal data.</p>
+            <!-- Privacy Policy Content -->
+            <div id="privacy-content" class="policy-content-section active">
+                <div class="policy-section">
+                    <h2><i class="fas fa-database"></i> Information We Collect</h2>
+                    <p>To process your orders and provide the best possible service, we collect the following personal
+                        information:</p>
+                    <ul>
+                        <li><strong>Personal Information:</strong> Name, phone numbers, and shipping addresses.</li>
+                        <li><strong>Conversation Data:</strong> Order details and shipping information exchanged via
+                            WhatsApp conversations, as this is our primary method of communication and order processing.
+                        </li>
+                        <li><strong>Usage Data:</strong> Information about how you use our website and services.</li>
+                    </ul>
+                    <p><strong>Note on Cookies:</strong> We do not use cookies on our website to track personal data.
+                    </p>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-cogs"></i> How We Collect Your Information</h2>
+                    <p>We collect information through the following means:</p>
+                    <ul>
+                        <li><strong>WhatsApp Conversations:</strong> When you contact us to place an order or ask a
+                            question, we collect the information you provide (name, phone number, shipping address)
+                            directly from our WhatsApp conversation. This is our primary method for collecting
+                            order-related data.</li>
+                        <li><strong>Direct Contact:</strong> When you email us or otherwise get in touch for customer
+                            support.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-shield-alt"></i> Third-Party Services</h2>
+                    <p>We use the following third-party services to operate our store:</p>
+                    <ul>
+                        <li><strong>WhatsApp:</strong> Used for all customer communication, order placement, and
+                            shipping address collection. Your conversations are subject to WhatsApp's privacy policy.
+                        </li>
+                        <li><strong>Automated Payment Systems:</strong> We use third-party payment processors to handle
+                            transactions securely.</li>
+                        <li><strong>Email Marketing Services:</strong> We may use your email to send updates and offers,
+                            with your consent.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-phone-alt"></i> Contact Us About Your Data</h2>
+                    <p>If you have any questions about this Privacy Policy, or if you wish to access, correct, or
+                        request deletion of your personal data, please contact us:</p>
+                    <ul>
+                        <li><strong>Business Name:</strong> Alimoon Fashion Planet</li>
+                        <li><strong>Website URL:</strong> https://athna.store/</li>
+                        <li><strong>By email:</strong> info@athna.store</li>
+                        <li><strong>By phone / WhatsApp:</strong> +62 878-6485-3508</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="policy-section">
-                <h2><i class="fas fa-cogs"></i> How We Collect Your Information</h2>
-                <p>We collect information through the following means:</p>
-                <ul>
-                    <li><strong>WhatsApp Conversations:</strong> When you contact us to place an order or ask a question, we collect the information you provide (name, phone number, shipping address) directly from our WhatsApp conversation. This is our primary method for collecting order-related data.</li>
-                    <li><strong>Direct Contact:</strong> When you email us or otherwise get in touch for customer support.</li>
-                </ul>
-            </div>
+            <!-- Return Policy Content -->
+            <div id="return-content" class="policy-content-section">
+                <div class="policy-section">
+                    <h2><i class="fas fa-box"></i> Products & Shipping</h2>
+                    <p>We sell physical products including casualwear, sportswear, caps, hats, and accessories.</p>
+                    <ul>
+                        <li></i> <strong>Shipping
+                                Locations:</strong> We currently ship to Bali and nearby islands only.</li>
+                        <li></i>
+                            <strong>Carriers:</strong> We use various shipping carriers (such as USPS, FedEx, DHL, etc.)
+                            depending on your location, order and availability.
+                        </li>
+                        <li></i> <strong>Processing
+                                Time:</strong> Orders are processed between 10:00 AM and 7:00 PM on business days.</li>
+                        <li></i> <strong>Shipping
+                                Costs:</strong> Shipping costs are calculated at checkout based destination of your
+                            order.</li>
+                    </ul>
+                </div>
 
-            <div class="policy-section">
-                <h2><i class="fas fa-shield-alt"></i> Third-Party Services</h2>
-                <p>We use the following third-party services to operate our store:</p>
-                <ul>
-                    <li><strong>WhatsApp:</strong> Used for all customer communication, order placement, and shipping address collection. Your conversations are subject to WhatsApp's privacy policy.</li>
-                    <li><strong>Google Analytics:</strong> We use Google Analytics to understand how visitors interact with our website, helping us improve your experience. This service may collect anonymous usage data and device information.</li>
-                </ul>
-            </div>
+                <div class="policy-section">
+                    <h2><i class="fas fa-undo-alt"></i> 7-Day Return Window</h2>
+                    <ul>
+                        <li></i> <strong>Return
+                                Window:</strong> You have 7 days from the delivery date to request a return.</li>
+                        <li></i>
+                            <strong>Condition:</strong> Items must be unused, unwashed, and in original packaging with
+                            all tags attached.
+                        </li>
+                        <li></i> <strong>Return
+                                Shipping:</strong> The customer is responsible for paying return shipping costs.</li>
+                    </ul>
+                </div>
 
-            <div class="policy-section">
-                <h2><i class="fas fa-phone-alt"></i> Contact Us About Your Data</h2>
-                <p>If you have any questions about this Privacy Policy, or if you wish to access, correct, or request deletion of your personal data, please contact us:</p>
-                <ul>
-                    <li><strong>Business Name:</strong> ATHNA</li>
-                    <li><strong>Website URL:</strong> https://athna.store/</li>
-                    <li><strong>By email:</strong> cs@athna.store</li>
-                    <li><strong>By phone / WhatsApp:</strong> +62 878-6485-3508</li>
-                    <li><strong>By mail:</strong> Jl. Pantai Berawa, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali 80361, Indonesia</li>
-                </ul>
+                <div class="policy-section">
+                    <h2><i class="fas fa-money-bill-wave"></i> Refunds & Exchanges</h2>
+                    <ul>
+                        <li></i> <strong>Refund
+                                Method:</strong> Refunds are issued to the original payment method (bank transfer,
+                            e-wallet) or via exchange for a different size/color, subject to availability.</li>
+                    </ul>
+                </div>
+
+                <div class="policy-section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Exceptions (Non-Returnable Items)</h2>
+                    <ul>
+                        <li></i> For hygiene reasons, we
+                            cannot accept returns on <strong>tops, leggings, and swimwear</strong>. These items are
+                            final sale.</li>
+                        <li></i> Items marked as "Final
+                            Sale" or purchased during clearance events cannot be returned or exchanged.</li>
+                    </ul>
+                </div>
+
+                <div class="info-box" style="margin-top: 20px;">
+                    <p><strong><i class="fas fa-headset"></i> Need Help?</strong> Start a return by contacting us on
+                        WhatsApp at +62 878-6485-3508 or email info@athna.store. Please have your order number ready.
+                    </p>
+                </div>
             </div>
 
             <!-- Policy Buttons -->
             <div class="policy-buttons">
-                <button class="policy-btn" onclick="showPolicy('privacy')">
+                <button class="policy-btn active" id="privacy-btn" onclick="switchPolicy('privacy')">
                     <i class="fas fa-lock"></i> Privacy Policy
                 </button>
-                <button class="policy-btn return" onclick="showPolicy('return')">
-                    <i class="fas fa-undo-alt"></i> Return Policy
+                <button class="policy-btn" id="return-btn" onclick="switchPolicy('return')">
+                    <i class="fas fa-undo-alt"></i> Shiping, Refund & Return Policy
                 </button>
             </div>
         </div>
@@ -1148,53 +1105,6 @@
     <a href="./index.html" class="floating-back" title="Back to Home">
         <i class="fas fa-arrow-left"></i>
     </a>
-
-    <!-- Return Policy Modal (Updated with provided details) -->
-    <div class="modal" id="return-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Return & Shipping Policy</h2>
-                <p>Last Updated: February 25, 2026</p>
-                <button class="close-modal" onclick="closeModal()">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h3><i class="fas fa-box"></i> Products & Shipping</h3>
-                <p>We sell physical items including casualwear, sportswear, caps, hats, and accessories.</p>
-                <ul>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Shipping Locations:</strong> We ship nationwide within Indonesia and offer international shipping.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Carriers:</strong> We use JNE, SiCepat, and Pos Indonesia for domestic orders, and DHL or Pos Indonesia for international orders.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Processing Time:</strong> Orders are processed within 1-3 business days.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Shipping Costs:</strong> Calculated at checkout based on weight and destination. Free shipping is available for orders over Rp 1,000,000 IDR.</li>
-                </ul>
-
-                <h3><i class="fas fa-undo-alt"></i> 14-Day Return Window</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Return Window:</strong> You have 14 days from the delivery date to request a return.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Condition:</strong> Items must be unused, unwashed, and in original packaging with all tags attached.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Return Shipping:</strong> The customer is responsible for paying return shipping costs unless the item is defective or an error was made on our part.</li>
-                </ul>
-
-                <h3><i class="fas fa-money-bill-wave"></i> Refunds & Exchanges</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Refund Method:</strong> Refunds are issued to the original payment method (bank transfer, e-wallet) within 5-7 business days after we receive and inspect the return.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Exchanges:</strong> We offer exchanges for a different size or color, subject to availability. Contact us to arrange an exchange.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Store Credit:</strong> Store credit can be issued upon request as an alternative to a refund.</li>
-                </ul>
-
-                <h3><i class="fas fa-exclamation-triangle"></i> Exceptions</h3>
-                <ul>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Final Sale:</strong> Items marked as "Final Sale" or purchased during clearance events cannot be returned or exchanged.</li>
-                    <li><i class="fas fa-check-circle" style="color: var(--text-on-primary); margin-right: 10px;"></i> <strong>Personalized Items:</strong> Any customized or personalized items are non-returnable.</li>
-                </ul>
-
-                <div class="info-box" style="margin-top: 20px;">
-                    <p><strong><i class="fas fa-headset"></i> Need Help?</strong> Start a return by contacting us on WhatsApp at +62 878-6485-3508 or email cs@athna.store. Please have your order number ready.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer>
@@ -1260,36 +1170,41 @@
             }
         });
 
-        // Policy functions
-        function showPolicy(policy) {
-            if (policy === 'return') {
-                document.getElementById('return-modal').classList.add('show');
-                document.body.style.overflow = 'hidden';
+        // Policy switching function
+        function switchPolicy(policy) {
+            const privacyContent = document.getElementById('privacy-content');
+            const returnContent = document.getElementById('return-content');
+            const privacyBtn = document.getElementById('privacy-btn');
+            const returnBtn = document.getElementById('return-btn');
+            const policyTitle = document.getElementById('policy-title');
+            const policySubtitle = document.getElementById('policy-subtitle');
+
+            if (policy === 'privacy') {
+                // Show privacy policy
+                privacyContent.classList.add('active');
+                returnContent.classList.remove('active');
+                privacyBtn.classList.add('active');
+                returnBtn.classList.remove('active');
+
+                // Update hero section
+                policyTitle.textContent = 'Privacy Policy';
+                policySubtitle.textContent = 'Your privacy is important to us. Learn how we protect and manage your data at ATHNA.';
             } else {
-                // Scroll to top for privacy policy
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
+                // Show return policy
+                returnContent.classList.add('active');
+                privacyContent.classList.remove('active');
+                returnBtn.classList.add('active');
+                privacyBtn.classList.remove('active');
 
-        function closeModal() {
-            document.getElementById('return-modal').classList.remove('show');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('return-modal');
-            if (event.target === modal) {
-                closeModal();
+                // Update hero section
+                policyTitle.textContent = 'Return & Shipping Policy';
+                policySubtitle.textContent = 'Learn about our return policy, shipping information, and refund process at ATHNA.';
             }
-        }
 
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
+
 </html>
