@@ -533,7 +533,8 @@
 
    .last-updated {
        text-align: center;
-       margin-top: 30px;
+       margin-bottom: 30px;
+       
        color: #666;
        font-size: 0.95rem;
        display: flex;
